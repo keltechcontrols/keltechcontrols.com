@@ -3,833 +3,678 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kel Tech Controls — Primavera P6 Development, Turnaround Support, & Independent Reviews</title>
-  <meta name="description" content="Kel Tech Controls provides Primavera P6 scheduler development, turnaround scheduling support, and independent Schedule Doctor reviews for refineries and industrial facilities." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Kel-Tech Controls | Turnaround Scheduling & Project Controls</title>
+  <meta name="description" content="Kel-Tech Controls provides turnaround scheduling, Primavera P6 support, Schedule Doctor remote schedule diagnostics, and project controls consulting for refineries and industrial facilities." />
   <style>
-    :root {
-      --navy: #0b1929;
-      --navy-mid: #122338;
-      --navy-light: #1a3450;
-      --steel: #2c4a6b;
-      --rust: #c8541a;
-      --rust-light: #e06030;
-      --amber: #e8a830;
-      --slate: #8ba5bc;
-      --light: #d4e3ef;
-      --white: #f0f6fb;
-      --text: #a8c4d8;
-      --max: 1180px;
-      --shadow: 0 18px 50px rgba(0,0,0,0.32);
+    :root{
+      --bg:#08111f;
+      --bg2:#0d1b2e;
+      --panel:rgba(255,255,255,.06);
+      --panel-strong:rgba(255,255,255,.09);
+      --text:#eef4ff;
+      --muted:#b9c7da;
+      --line:rgba(255,255,255,.12);
+      --blue:#5eb6ff;
+      --blue2:#7dd3fc;
+      --teal:#62e3d6;
+      --gold:#ffd166;
+      --shadow:0 20px 60px rgba(0,0,0,.35);
+      --radius:22px;
+      --max:1180px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--navy);
-      color: var(--text);
-      font-family: 'Barlow', sans-serif;
-      font-weight: 300;
-      font-size: 17px;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-    a { color: inherit; }
-
-    .shell { max-width: var(--max); margin: 0 auto; position: relative; z-index: 2; }
-
-    nav {
-      position: fixed;
-      inset: 0 0 auto 0;
-      z-index: 200;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 34px;
-      background: rgba(11,25,41,0.84);
-      border-bottom: 1px solid rgba(44,74,107,0.35);
-      backdrop-filter: blur(14px);
-    }
-
-    .nav-logo {
-      text-decoration: none;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.65rem;
-      letter-spacing: 0.13em;
-      color: var(--white);
-    }
-    .nav-logo span { color: var(--rust); }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 28px;
-      margin: 0;
-      padding: 0;
-    }
-    .nav-links a {
-      text-decoration: none;
-      font-family: 'Barlow Condensed', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--slate);
-      transition: color .2s ease;
-    }
-    .nav-links a:hover { color: var(--white); }
-
-    .hero {
-      min-height: 100vh;
-      position: relative;
-      overflow: hidden;
-      padding: 132px 34px 84px;
-      display: flex;
-      align-items: center;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
       background:
-        radial-gradient(circle at 74% 23%, rgba(200,84,26,0.13) 0%, transparent 28%),
-        radial-gradient(circle at 82% 70%, rgba(232,168,48,0.08) 0%, transparent 24%),
-        radial-gradient(circle at 20% 76%, rgba(44,74,107,0.24) 0%, transparent 34%),
-        linear-gradient(160deg, #0a1523 0%, #0f2238 46%, #08121d 100%);
-      z-index: 0;
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image:
-        repeating-linear-gradient(90deg, transparent, transparent 119px, rgba(44,74,107,0.11) 119px, rgba(44,74,107,0.11) 120px),
-        repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(44,74,107,0.06) 79px, rgba(44,74,107,0.06) 80px);
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.35));
-      z-index: 0;
+        radial-gradient(circle at top right, rgba(94,182,255,.12), transparent 30%),
+        radial-gradient(circle at 15% 20%, rgba(98,227,214,.10), transparent 25%),
+        linear-gradient(180deg, #08111f 0%, #091525 35%, #0c1a2d 100%);
+      line-height:1.55;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
-      gap: 44px;
-      align-items: end;
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%}
+    .container{width:min(var(--max), calc(100% - 32px)); margin:0 auto}
+    .section{padding:88px 0}
+    .section-tight{padding:64px 0}
+    .eyebrow{
+      display:inline-block;
+      font-size:.78rem;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--blue2);
+      margin-bottom:14px;
+      font-weight:700;
+    }
+    h1,h2,h3{margin:0 0 16px}
+    h1{
+      font-size:clamp(2.4rem, 5vw, 5rem);
+      line-height:.98;
+      letter-spacing:-.03em;
+    }
+    h2{
+      font-size:clamp(1.9rem, 3.8vw, 3rem);
+      line-height:1.04;
+      letter-spacing:-.02em;
+    }
+    h3{
+      font-size:1.15rem;
+      line-height:1.2;
+    }
+    p{margin:0 0 18px;color:var(--muted);font-size:1.03rem}
+    .lead{font-size:1.12rem; color:#dbe8f8}
+    .glass{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      backdrop-filter: blur(10px);
+      box-shadow:var(--shadow);
+    }
+    .card{
+      padding:26px;
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:20px;
+      box-shadow:var(--shadow);
+    }
+    .btn-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 20px;
+      border-radius:999px;
+      font-weight:700;
+      transition:.2s ease;
+      border:1px solid transparent;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg, var(--blue), var(--teal));
+      color:#07111b;
+      box-shadow:0 12px 30px rgba(94,182,255,.28);
+    }
+    .btn-primary:hover{transform:translateY(-1px)}
+    .btn-secondary{
+      border-color:var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+    }
+    .btn-secondary:hover{
+      background:rgba(255,255,255,.08);
+      transform:translateY(-1px);
     }
 
-    .eyebrow,
-    .section-label {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--rust);
-      display: flex;
-      align-items: center;
-      gap: 12px;
+    .nav-wrap{
+      position:sticky;
+      top:0;
+      z-index:100;
+      backdrop-filter: blur(14px);
+      background:rgba(8,17,31,.72);
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
-    .eyebrow::before,
-    .section-label::before {
-      content: "";
-      width: 34px;
-      height: 2px;
-      background: var(--rust);
-      display: inline-block;
-      flex: 0 0 auto;
+    .nav{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+    .brand-mark{
+      width:44px;
+      height:44px;
+      flex:0 0 44px;
+    }
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+      min-width:0;
+    }
+    .brand-text strong{
+      font-size:1rem;
+      line-height:1.05;
+      letter-spacing:.01em;
+    }
+    .brand-text span{
+      font-size:.8rem;
+      color:var(--muted);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .nav-links a{
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    .nav-links a:hover{color:var(--text)}
+
+    .hero{
+      padding:78px 0 50px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:28px;
+      align-items:stretch;
+    }
+    .hero-copy{
+      padding:10px 0;
+    }
+    .hero-copy .sublead{
+      max-width:720px;
+    }
+    .hero-panel{
+      padding:24px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-panel::before{
+      content:"";
+      position:absolute;
+      inset:auto -40px -40px auto;
+      width:220px;
+      height:220px;
+      background:radial-gradient(circle, rgba(94,182,255,.22), transparent 62%);
+      pointer-events:none;
+    }
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:22px;
+    }
+    .stat{
+      padding:18px;
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+    }
+    .stat strong{
+      display:block;
+      font-size:1.7rem;
+      line-height:1;
+      margin-bottom:8px;
+      color:#fff;
+    }
+    .stat span{
+      color:var(--muted);
+      font-size:.92rem;
     }
 
-    h1, h2 {
-      margin: 0;
-      font-family: 'Bebas Neue', sans-serif;
-      line-height: 0.95;
-      letter-spacing: 0.04em;
-      color: var(--white);
+    .doctor{
+      position:relative;
     }
-    h1 {
-      margin-top: 22px;
-      font-size: clamp(4.2rem, 9vw, 8rem);
-    }
-    h1 em { font-style: normal; color: var(--rust); }
-    .hero-sub {
-      margin-top: 14px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(1.04rem, 2vw, 1.5rem);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--slate);
-    }
-    .hero-copy {
-      margin-top: 28px;
-      max-width: 720px;
-      color: var(--light);
-      font-size: 1.06rem;
-      border-left: 3px solid var(--rust);
-      padding-left: 18px;
-    }
-    .hero-copy strong { color: var(--white); font-weight: 500; }
-
-    .button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 34px;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 14px 28px;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      font-size: 0.9rem;
-      transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
-      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary {
-      background: var(--rust);
-      color: var(--white);
-      box-shadow: 0 12px 28px rgba(200,84,26,0.23);
-    }
-    .btn-primary:hover { background: var(--rust-light); }
-    .btn-secondary {
-      color: var(--light);
-      border: 1px solid rgba(139,165,188,0.45);
-      background: rgba(18,35,56,0.55);
-    }
-    .btn-secondary:hover {
-      border-color: rgba(212,227,239,0.75);
-      color: var(--white);
-    }
-
-    .hero-note {
-      margin-top: 16px;
-      color: var(--slate);
-      font-size: 0.95rem;
-    }
-    .hero-note a {
-      color: var(--amber);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(232,168,48,0.28);
-    }
-
-    .hero-panel {
-      position: relative;
-      padding: 28px;
-      background: linear-gradient(180deg, rgba(18,35,56,0.94), rgba(10,20,35,0.96));
-      border: 1px solid rgba(44,74,107,0.48);
-      box-shadow: var(--shadow);
-      clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
-    }
-    .hero-panel::before {
-      content: "";
-      position: absolute;
-      inset: 12px;
-      border: 1px solid rgba(200,84,26,0.14);
-      pointer-events: none;
-    }
-    .panel-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      color: var(--rust);
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-    .panel-grid {
-      display: grid;
-      gap: 12px;
-    }
-    .panel-item {
-      display: grid;
-      grid-template-columns: 78px 1fr;
-      gap: 16px;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(44,74,107,0.45);
-    }
-    .panel-item:last-child { border-bottom: 0; }
-    .panel-item strong {
-      font-family: 'Bebas Neue', sans-serif;
-      font-weight: 400;
-      color: var(--white);
-      font-size: 1.6rem;
-      letter-spacing: 0.05em;
-      line-height: 1;
-    }
-    .panel-item span {
-      color: var(--light);
-      font-size: 0.95rem;
-      line-height: 1.5;
-      display: block;
-    }
-
-    section {
-      padding: 96px 34px;
-      position: relative;
-    }
-
-    .section-label {
-      margin-bottom: 16px;
-      gap: 10px;
-    }
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: rgba(200,84,26,0.3);
-      max-width: 80px;
-    }
-
-    h2 {
-      font-size: clamp(2.6rem, 5vw, 4rem);
-      line-height: 1;
-      letter-spacing: 0.05em;
-      margin-bottom: 20px;
-    }
-
-    h3 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--white);
-      margin-bottom: 12px;
-    }
-
-    .feature-grid,
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      margin-top: 48px;
-    }
-
-    .feature-card,
-    .service-card {
-      background: var(--navy-mid);
-      padding: 44px 36px;
-      border-top: 3px solid transparent;
-      transition: border-color 0.2s, background 0.2s, transform 0.2s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .feature-card:hover,
-    .service-card:hover {
-      border-top-color: var(--rust);
-      background: var(--navy-light);
-      transform: translateY(-2px);
-    }
-
-    .feature-card::after,
-    .service-card::after {
-      content: attr(data-num);
-      position: absolute;
-      right: 24px;
-      bottom: 16px;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 4rem;
-      color: rgba(44,74,107,0.25);
-      letter-spacing: 0.05em;
-      line-height: 1;
-    }
-
-    .service-icon {
-      font-size: 1.6rem;
-      margin-bottom: 20px;
-      display: block;
-    }
-
-    .service-list,
-    .checklist,
-    .bullet-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      padding: 0;
-      margin: 0;
-    }
-
-    .service-list li,
-    .checklist li,
-    .bullet-list li {
-      color: var(--light);
-      position: relative;
-      padding-left: 16px;
-      font-size: 0.95rem;
-    }
-
-    .service-list li::before,
-    .checklist li::before,
-    .bullet-list li::before {
-      content: '◆';
-      position: absolute;
-      left: 0;
-      top: 0.18rem;
-      color: var(--rust);
-      font-size: 0.52rem;
-    }
-
-    .schedule-doctor {
-      background: var(--navy-mid);
-      position: relative;
-      overflow: hidden;
-    }
-    .schedule-doctor::before {
-      content: 'SCHEDULE DOCTOR';
-      position: absolute;
-      right: -20px;
-      top: 50%;
-      transform: translateY(-50%) rotate(90deg);
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 9rem;
-      letter-spacing: 0.1em;
-      color: rgba(44,74,107,0.18);
-      pointer-events: none;
-      white-space: nowrap;
-    }
-    .sd-inner,
-    .how-inner,
-    .about-inner {
-      display: grid;
+    .doctor-grid{
+      display:grid;
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-      max-width: 1100px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
+      gap:24px;
+      align-items:stretch;
     }
-    .sd-badge {
-      display: inline-block;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 3.5rem;
-      letter-spacing: 0.08em;
-      color: var(--white);
-      border: 2px solid var(--rust);
-      padding: 28px 36px;
-      position: relative;
-      margin-bottom: 28px;
+    .doctor-brand{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:16px;
     }
-    .sd-badge::before {
-      content: '';
-      position: absolute;
-      top: 6px;
-      left: 6px;
-      right: -6px;
-      bottom: -6px;
-      border: 1px solid rgba(200,84,26,0.3);
-      z-index: -1;
+    .doctor-logo{
+      width:72px;
+      height:72px;
+      flex:0 0 72px;
+      border-radius:18px;
+      background:linear-gradient(145deg, rgba(126,211,252,.12), rgba(98,227,214,.08));
+      border:1px solid var(--line);
+      display:grid;
+      place-items:center;
     }
-    .sd-badge sub {
-      display: block;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      color: var(--rust);
-      margin-top: -8px;
+    .doctor-brand-text strong{
+      display:block;
+      font-size:1.2rem;
     }
-    .sd-text p,
-    .about-body p,
-    .how-copy,
-    .section-copy {
-      color: var(--text);
-      font-size: 1.02rem;
-      margin-bottom: 18px;
+    .doctor-brand-text span{
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    .pill-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+      margin-top:16px;
+    }
+    .pill{
+      padding:14px 16px;
+      border-radius:16px;
+      background:rgba(255,255,255,.05);
+      border:1px solid var(--line);
+      color:#dfe8f5;
+      font-weight:600;
+      font-size:.95rem;
     }
 
-    .how {
-      background: var(--navy-mid);
-      border-top: 1px solid rgba(44,74,107,0.4);
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
     }
-    .engagement-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      margin-top: 24px;
-      padding: 0;
+    .card ul{
+      margin:14px 0 0;
+      padding:0;
+      list-style:none;
     }
-    .engagement-list li {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 18px 0;
-      border-bottom: 1px solid rgba(44,74,107,0.4);
-      font-size: 0.97rem;
-      color: var(--light);
+    .card li{
+      padding:10px 0;
+      border-top:1px solid rgba(255,255,255,.08);
+      color:var(--muted);
     }
-    .engagement-list li:first-child { border-top: 1px solid rgba(44,74,107,0.4); }
-    .e-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.6rem;
-      color: var(--rust);
-      letter-spacing: 0.05em;
-      min-width: 36px;
+    .card li:first-child{border-top:none;padding-top:0}
+
+    .process-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
     }
-    .callout-box {
-      background: var(--navy-light);
-      border-left: 4px solid var(--rust);
-      padding: 32px 28px;
-      margin-bottom: 28px;
+    .step{
+      padding:22px;
+      border-radius:20px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
     }
-    .callout-box p {
-      font-size: 1.05rem;
-      color: var(--light);
-      font-style: italic;
-      line-height: 1.6;
-      margin: 0;
+    .step-number{
+      display:inline-grid;
+      place-items:center;
+      width:34px;
+      height:34px;
+      margin-bottom:14px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--blue),var(--teal));
+      color:#08111f;
+      font-weight:800;
     }
 
-    .about {
-      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%);
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
     }
-    .about-id { min-width: 240px; }
-    .about-monogram {
-      width: 120px;
-      height: 120px;
-      background: var(--navy-light);
-      border: 2px solid var(--rust);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 24px;
-      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+    .credentials{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:18px;
     }
-    .about-monogram span {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 3.5rem;
-      color: var(--rust);
-      letter-spacing: 0.04em;
-    }
-    .about-name {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.8rem;
-      letter-spacing: 0.06em;
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-    .about-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.8rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--rust);
+    .credential{
+      padding:18px;
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      font-weight:600;
+      color:#e4edf8;
     }
 
-    .cta {
-      background: var(--navy-light);
-      text-align: center;
-      padding: 100px 34px;
-      position: relative;
-      overflow: hidden;
-    }
-    .cta::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 70% 100% at 50% 50%, rgba(200,84,26,0.08) 0%, transparent 70%);
-    }
-    .cta-inner {
-      position: relative;
-      z-index: 1;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-    .cta p {
-      font-size: 1.05rem;
-      color: var(--text);
-      margin-bottom: 40px;
-      max-width: 560px;
-      margin-left: auto;
-      margin-right: auto;
+    .cta{
+      padding:30px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:24px;
+      align-items:center;
     }
 
-    footer {
-      background: #07111c;
-      padding: 32px 48px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      border-top: 1px solid rgba(44,74,107,0.3);
+    footer{
+      padding:28px 0 50px;
+      border-top:1px solid rgba(255,255,255,.08);
     }
-    .footer-logo {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.1rem;
-      letter-spacing: 0.12em;
-      color: var(--slate);
+    .footer-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
     }
-    .footer-logo span { color: var(--rust); }
-    footer p {
-      font-size: 0.8rem;
-      color: rgba(139,165,188,0.7);
-      letter-spacing: 0.05em;
-      margin: 0;
+    .small{font-size:.92rem;color:var(--muted)}
+
+    @media (max-width: 980px){
+      .hero-grid,
+      .doctor-grid,
+      .about-grid,
+      .cta{
+        grid-template-columns:1fr;
+      }
+      .services-grid{
+        grid-template-columns:1fr;
+      }
+      .process-grid{
+        grid-template-columns:1fr 1fr;
+      }
     }
 
-    .pipe-divider {
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--rust) 20%, var(--amber) 50%, var(--rust) 80%, transparent);
-      opacity: 0.6;
+    @media (max-width: 680px){
+      .nav{
+        min-height:auto;
+        padding:14px 0;
+        align-items:flex-start;
+        flex-direction:column;
+      }
+      .nav-links{
+        justify-content:flex-start;
+      }
+      .stats,
+      .pill-grid,
+      .credentials,
+      .process-grid{
+        grid-template-columns:1fr;
+      }
+      .hero{
+        padding-top:48px;
+      }
+      .section{
+        padding:72px 0;
+      }
     }
-
-    @media (max-width: 1024px) {
-      .hero-grid { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 900px) {
-      nav { padding: 16px 24px; }
-      .nav-links { display: none; }
-      section, .cta { padding-left: 24px; padding-right: 24px; }
-      .hero { padding: 110px 24px 80px; }
-      .feature-grid, .services-grid, .sd-inner, .how-inner, .about-inner { grid-template-columns: 1fr; gap: 48px; }
-      .schedule-doctor::before { display: none; }
-      footer { flex-direction: column; text-align: center; padding: 28px 24px; }
-    }
-
-    @media (max-width: 560px) {
-      .button-row { flex-direction: column; }
-      .btn { width: 100%; }
-      .panel-item { grid-template-columns: 1fr; gap: 8px; }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .hero-copy, h1, .hero-sub, .button-row, .hero-panel { animation: fadeUp .6s ease both; }
-    .hero-copy { animation-delay: .1s; }
-    .button-row { animation-delay: .2s; }
-    .hero-panel { animation-delay: .3s; }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#" class="nav-logo">Kel <span>Tech</span> Controls</a>
-    <ul class="nav-links">
-      <li><a href="#development">Development</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#schedule-doctor">Schedule Doctor</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
-  <section class="hero">
-    <div class="shell hero-grid">
-      <div>
-        <div class="eyebrow">Primavera P6 Development &amp; Turnaround Support</div>
-        <h1>Kel <em>Tech</em><br>Controls</h1>
-        <div class="hero-sub">Build real scheduling capability — not just software familiarity</div>
+  <div class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ktg" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#7DD3FC"/>
+                <stop offset="1" stop-color="#62E3D6"/>
+              </linearGradient>
+            </defs>
+            <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#ktg)" fill-opacity=".12" stroke="rgba(255,255,255,.2)"/>
+            <path d="M19 18V46" stroke="url(#ktg)" stroke-width="5" stroke-linecap="round"/>
+            <path d="M45 18L28 32L45 46" stroke="url(#ktg)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23 32H41" stroke="#FFD166" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <strong>Kel-Tech Controls</strong>
+          <span>Turnaround Scheduling & Project Controls</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#schedule-doctor">Schedule Doctor</a>
+        <a href="#services">Services</a>
+        <a href="#process">How It Works</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
         <div class="hero-copy">
-          Most courses teach you how to use the tool. <strong>I focus on the craft behind it</strong> — how to build schedules that flow, hold up in execution, and give you something useful to manage when the turnaround gets real.
-        </div>
-        <div class="button-row">
-          <a href="https://forms.gle/xGJ5X5MMnMQoocQR9" class="btn btn-primary">Start Intake</a>
-          <a href="mailto:jason.kelley@keltechcontrols.com?subject=Scheduler Development Inquiry" class="btn btn-secondary">Email Jason</a>
-        </div>
-        <div class="hero-note">Already know what you need? <a href="#schedule-doctor">Jump to independent review services</a>.</div>
-      </div>
-      <aside class="hero-panel">
-        <div class="panel-title">What this is built for</div>
-        <div class="panel-grid">
-          <div class="panel-item">
-            <strong>Build</strong>
-            <span>Structure schedules that flow from start to finish, use the right level of detail, and avoid the logic problems that break execution.</span>
-          </div>
-          <div class="panel-item">
-            <strong>Update</strong>
-            <span>Learn how to turn a schedule on, handle day-one reality, and keep it usable when shutdown conditions start changing fast.</span>
-          </div>
-          <div class="panel-item">
-            <strong>Read</strong>
-            <span>Understand float, near-critical work, milestones, resource density, and what the schedule is really telling you.</span>
+          <div class="eyebrow">Independent Turnaround Support</div>
+          <h1>Turnaround schedules that hold up in the field.</h1>
+          <p class="lead sublead">
+            Kel-Tech Controls provides turnaround scheduling, Primavera P6 support, and project controls guidance for refineries and industrial facilities — with practical owner-side experience behind every review.
+          </p>
+          <p>
+            From schedule development and recovery planning to remote diagnostics and advisory support, the goal is simple: identify risk early, improve schedule credibility, and help teams execute with confidence.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="mailto:jason.kelley@keltechcontrols.com?subject=Schedule%20Review%20Inquiry">Request a Schedule Review</a>
+            <a class="btn btn-secondary" href="#schedule-doctor">Explore Schedule Doctor</a>
           </div>
         </div>
-      </aside>
-    </div>
-  </section>
 
-  <div class="pipe-divider"></div>
+        <div class="hero-panel glass">
+          <div class="eyebrow">Why Kel-Tech</div>
+          <h3>Experienced support without the overhead of full-time staffing.</h3>
+          <p>
+            Many organizations do not need a permanent scheduler year-round. Remote support gives teams access to seasoned turnaround and project controls insight when it matters most.
+          </p>
 
-  <section id="development">
-    <div class="shell">
-      <div class="section-label">Scheduler Development</div>
-      <h2>Practical P6 Development for Real Turnaround Work</h2>
-      <p class="section-copy">This is hands-on development for planners and schedulers who want more than button training. Sessions are built around real-world scheduling judgment: logic, flow, layouts, activity detail, milestone strategy, updates, and the discipline needed to keep a schedule useful under pressure. When you already have P6 access, we can work directly in your environment. When you do not, we can still work hands-on through secure screen sharing and remote control in Zoom or Teams during the session.</p>
-      <div class="feature-grid">
-        <div class="feature-card" data-num="01">
-          <h3>Build It Right</h3>
-          <p class="section-copy">Duration types, coding, resource dictionary setup, layout strategy, milestones, and schedule flow from start to finish.</p>
-        </div>
-        <div class="feature-card" data-num="02">
-          <h3>Turn It On</h3>
-          <p class="section-copy">What to do when shutdown starts, pre-TA items are unfinished, and the schedule changes after the first day of execution.</p>
-        </div>
-        <div class="feature-card" data-num="03">
-          <h3>Manage With It</h3>
-          <p class="section-copy">Negative float, near-critical work, baseline control, manpower density, and how to update and report something people can actually trust.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="pipe-divider"></div>
-
-  <section class="services" id="services">
-    <div class="shell">
-      <div class="section-label">What I Offer</div>
-      <h2>Services</h2>
-      <div class="services-grid">
-        <div class="service-card" data-num="01">
-          <span class="service-icon">◈</span>
-          <h3>One-on-One Scheduler Development</h3>
-          <p class="section-copy">Structured sessions for people who want to build real Primavera P6 scheduling capability with examples, exercises, .XER files, and practical walkthroughs that translate directly to turnaround work.</p>
-          <ul class="service-list">
-            <li>Hands-on scheduler development</li>
-            <li>P6 layouts, logic, and application</li>
-            <li>Turnaround-focused training path</li>
-            <li>Assignments between sessions</li>
-          </ul>
-        </div>
-        <div class="service-card" data-num="02">
-          <span class="service-icon">⚙</span>
-          <h3>Turnaround Scheduling Support</h3>
-          <p class="section-copy">Practical support for planning, execution, schedule recovery, and ongoing update discipline during refinery and industrial turnarounds.</p>
-          <ul class="service-list">
-            <li>Schedule development and cleanup</li>
-            <li>Execution support and updates</li>
-            <li>Milestone and inspection integration</li>
-            <li>Recovery and compression strategy</li>
-          </ul>
-        </div>
-        <div class="service-card" data-num="03">
-          <span class="service-icon">📊</span>
-          <h3>Project Controls Advisory</h3>
-          <p class="section-copy">Owner-side controls perspective for teams that need sharper schedule thinking, cleaner reporting, and practical execution-focused support.</p>
-          <ul class="service-list">
-            <li>P6 setup and controls guidance</li>
-            <li>Baseline, EV/PV, and reporting support</li>
-            <li>Excel reporting workflow guidance</li>
-            <li>Planning and scheduler review sessions</li>
-          </ul>
+          <div class="stats">
+            <div class="stat">
+              <strong>30+</strong>
+              <span>Years of turnaround and project scheduling experience</span>
+            </div>
+            <div class="stat">
+              <strong>P6</strong>
+              <span>Primavera expertise grounded in real execution needs</span>
+            </div>
+            <div class="stat">
+              <strong>Owner-Side</strong>
+              <span>Practical refinery perspective, not just software knowledge</span>
+            </div>
+            <div class="stat">
+              <strong>Remote</strong>
+              <span>Fast access to diagnostics, review, and advisory support</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="pipe-divider"></div>
+    <section id="schedule-doctor" class="section doctor">
+      <div class="container doctor-grid">
+        <div class="glass" style="padding:32px;">
+          <div class="doctor-brand">
+            <div class="doctor-logo" aria-hidden="true">
+              <svg viewBox="0 0 80 80" width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="sdg" x1="14" y1="12" x2="66" y2="68" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#7DD3FC"/>
+                    <stop offset="1" stop-color="#62E3D6"/>
+                  </linearGradient>
+                </defs>
+                <rect x="12" y="16" width="42" height="30" rx="8" stroke="url(#sdg)" stroke-width="4"/>
+                <path d="M20 56H46" stroke="url(#sdg)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M28 46V56" stroke="url(#sdg)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M38 46V56" stroke="url(#sdg)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M23 31H31V39H23V31Z" fill="#FFD166"/>
+                <path d="M34 27H42V39H34V27Z" fill="#7DD3FC"/>
+                <path d="M45 23H53V39H45V23Z" fill="#62E3D6"/>
+                <path d="M55 24C55 18.477 59.477 14 65 14C70.523 14 75 18.477 75 24C75 28.91 71.46 33.005 66.8 33.87V42C66.8 47.413 62.413 51.8 57 51.8H52" stroke="url(#sdg)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="65" cy="24" r="5.5" fill="none" stroke="#FFD166" stroke-width="3"/>
+              </svg>
+            </div>
+            <div class="doctor-brand-text">
+              <strong>Schedule Doctor</strong>
+              <span>Remote turnaround schedule diagnostics</span>
+            </div>
+          </div>
 
-  <section class="schedule-doctor" id="schedule-doctor">
-    <div class="sd-inner">
-      <div class="sd-text">
-        <div class="section-label">Independent Review Service</div>
-        <div class="sd-badge">
-          Schedule<br>Doctor
-          <sub>Turnaround Health Reviews</sub>
+          <div class="eyebrow">A Virtual House Call for Your P6 Schedule</div>
+          <h2>Expert review without waiting on a site visit.</h2>
+          <p class="lead">
+            Many turnaround schedules look solid at a glance but contain logic breaks, hidden float risk, manpower loading issues, or inspection integration gaps that do not show up until execution is underway.
+          </p>
+          <p>
+            Schedule Doctor makes remote support feel like an advantage, not a compromise. Teams can send a Primavera P6 export, review findings by screen share, and receive practical recommendations quickly — often before travel for a site visit would even be arranged.
+          </p>
+          <p>
+            That means faster diagnostics, lower overhead, and clear action items your team can use right away.
+          </p>
         </div>
-        <p>After more than 30 years supporting refinery turnarounds, I’ve seen how small schedule issues turn into major execution problems.</p>
-        <p>Broken logic, unrealistic manpower loading, weak milestone structure, poorly integrated inspection work, and bad open ends often go unnoticed until execution is already under pressure.</p>
-        <p>Schedule Doctor provides an independent Primavera P6 review to identify risk early, strengthen the baseline, and improve readiness before the wrench turns.</p>
-        <div class="button-row">
-          <a href="mailto:jason.kelley@keltechcontrols.com?subject=Schedule Review Request" class="btn btn-primary">Request Your Review</a>
+
+        <div class="glass" style="padding:32px;">
+          <div class="eyebrow">How It Works</div>
+          <h3>Simple, fast, and focused on what matters.</h3>
+          <div class="pill-grid">
+            <div class="pill">Send Schedule Export</div>
+            <div class="pill">Independent Remote Review</div>
+            <div class="pill">Screen-Share Findings</div>
+            <div class="pill">Written Recommendations</div>
+            <div class="pill">Identify Risk Early</div>
+            <div class="pill">Improve Execution Readiness</div>
+          </div>
+
+          <div style="margin-top:24px;padding:22px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line);">
+            <h3 style="margin-bottom:12px;">What a review can uncover</h3>
+            <p style="margin-bottom:10px;">Logic integrity and open ends</p>
+            <p style="margin-bottom:10px;">Critical path and float path issues</p>
+            <p style="margin-bottom:10px;">Shutdown and startup sequencing concerns</p>
+            <p style="margin-bottom:10px;">Craft loading and manpower imbalance</p>
+            <p style="margin-bottom:0;">Inspection integration and schedule quality gaps</p>
+          </div>
         </div>
       </div>
-      <div>
-        <div class="section-label">What I Look For</div>
-        <h2 style="font-size:2.2rem; margin-bottom: 32px;">Review Focus Areas</h2>
-        <ul class="checklist">
-          <li>Logic integrity, open-end checks, and schedule flow from start to finish</li>
-          <li>Critical path, float path, near-critical, and negative float analysis</li>
-          <li>Shutdown, inspection, and startup sequencing review</li>
-          <li>Craft loading, manpower density, and resource balance</li>
-          <li>Milestone structure, contingency thinking, and readiness indicators</li>
-          <li>Baseline review and execution control considerations</li>
-          <li>Written findings with prioritized recommendations</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="pipe-divider"></div>
+    <section id="services" class="section">
+      <div class="container">
+        <div class="eyebrow">Services</div>
+        <h2>Practical support across turnaround planning and execution.</h2>
+        <p class="lead" style="max-width:760px;">
+          Kel-Tech Controls supports refineries and industrial facilities with targeted scheduling, diagnostics, advisory services, and project controls support.
+        </p>
 
-  <section class="how">
-    <div class="how-inner shell">
-      <div>
-        <div class="section-label">How I Work</div>
-        <h2>Flexible Support, Built Around the Need</h2>
-        <p class="how-copy">Some people need development. Some need a second set of eyes. Some need help solving a real schedule problem right now. Engagements can be scoped around any of those.</p>
-        <ul class="engagement-list">
-          <li><span class="e-num">01</span> Complete the intake or reach out by email</li>
-          <li><span class="e-num">02</span> Align on current level, goals, and what kind of help you need</li>
-          <li><span class="e-num">03</span> Work directly in P6 when available, or hands-on through screen sharing and remote control during the session</li>
-          <li><span class="e-num">04</span> Keep it session-based or move into a more structured path</li>
-        </ul>
-      </div>
-      <div>
-        <div class="callout-box">
-          <p>“Small schedule issues rarely announce themselves. They surface at the worst possible moment — mid-execution — when the cost of correction is at its highest.”</p>
+        <div class="services-grid" style="margin-top:28px;">
+          <div class="card">
+            <h3>Turnaround Scheduling</h3>
+            <p>Support built around schedules that reflect how work is actually executed in the field.</p>
+            <ul>
+              <li>Primavera P6 schedule development</li>
+              <li>Shutdown and startup sequencing</li>
+              <li>Schedule recovery and compression planning</li>
+              <li>Schedule updates and execution support</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Project Controls Support</h3>
+            <p>Disciplined controls support without the overhead of adding full-time internal staff.</p>
+            <ul>
+              <li>P6 database and dictionary setup</li>
+              <li>Estimate development and validation</li>
+              <li>Reporting and dashboard development</li>
+              <li>Earned Value and Earned Schedule analysis</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Advisory & Coaching</h3>
+            <p>Flexible guidance for planners, schedulers, and teams who want practical development.</p>
+            <ul>
+              <li>Short consultation sessions</li>
+              <li>Scheduler development and mentoring</li>
+              <li>P6 fundamentals and real-world application</li>
+              <li>Turnaround planning best practices</li>
+            </ul>
+          </div>
         </div>
-        <p class="how-copy">Owner-side turnaround experience means you get practical guidance shaped by real execution pressure, not generic checklist reviews or software-only training.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="pipe-divider"></div>
+    <section id="process" class="section-tight">
+      <div class="container">
+        <div class="eyebrow">Remote Value</div>
+        <h2>Why remote support works.</h2>
+        <p class="lead" style="max-width:760px;">
+          Remote review is not a lesser option. In many cases it is the fastest path to actionable insight, especially early in planning or when quick diagnostics are needed.
+        </p>
 
-  <section class="about" id="about">
-    <div class="about-inner shell">
-      <div class="about-id">
-        <div class="about-monogram"><span>JK</span></div>
-        <div class="about-name">Jason Kelley</div>
-        <div class="about-title">Principal Consultant</div>
-        <ul class="bullet-list" style="margin-top:32px;">
-          <li>30+ years turnaround scheduling experience</li>
-          <li>Extensive owner-side refinery background</li>
-          <li>Primavera P6 specialist</li>
-          <li>Turnaround planning, controls, and execution support</li>
-        </ul>
+        <div class="process-grid" style="margin-top:26px;">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Fast access</h3>
+            <p>Review can begin as soon as the schedule export is received, without waiting on travel.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Focused review</h3>
+            <p>Screen-share sessions keep discussions efficient and centered on the actual schedule issues.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Lower overhead</h3>
+            <p>Teams get experienced support without the added cost and delay of arranging a site visit first.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Clear action items</h3>
+            <p>Recommendations can be documented and shared quickly so the team can respond immediately.</p>
+          </div>
+        </div>
       </div>
-      <div class="about-body">
-        <div class="section-label">About</div>
-        <h2>Kel Tech Controls</h2>
-        <p>Kel-Tech Controls was built on one premise: the best schedule support comes from someone who has sat on the owner’s side of the table and knows what a bad schedule costs in real execution.</p>
-        <p>With more than three decades in refinery turnaround scheduling — from planning through execution and close-out — I’ve developed the pattern recognition to spot risk that generic checklists and software-only training miss.</p>
-        <p>You get senior-level practical experience, not generic theory. Whether you need development, support, or an independent review, the goal is the same: a schedule you can actually use.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="pipe-divider"></div>
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="glass" style="padding:32px;">
+          <div class="eyebrow">About</div>
+          <h2>Owner-side refinery experience that translates into practical guidance.</h2>
+          <p class="lead">
+            Jason Kelley brings decades of turnaround and project scheduling experience with a strong focus on owner-side execution realities.
+          </p>
+          <p>
+            That perspective matters. Good schedules are not just technically correct — they need to support how operations, maintenance, inspection, and leadership actually make decisions and execute work during an event.
+          </p>
+          <p>
+            Kel-Tech Controls was built to provide that level of practical support in a flexible, accessible format.
+          </p>
+        </div>
 
-  <section class="cta" id="contact">
-    <div class="cta-inner">
-      <div class="section-label" style="justify-content:center;">Get Started</div>
-      <h2>Start With the Intake</h2>
-      <p>If you want to build real Primavera P6 scheduling capability, get help on a live turnaround schedule, or have an independent review done before execution, start with the intake and I’ll recommend the best path forward.</p>
-      <div class="button-row" style="justify-content:center;">
-        <a href="https://forms.gle/xGJ5X5MMnMQoocQR9" class="btn btn-primary">Open Intake Form</a>
-        <a href="mailto:jason.kelley@keltechcontrols.com" class="btn btn-secondary">Email Jason</a>
+        <div class="glass" style="padding:32px;">
+          <div class="eyebrow">Credentials</div>
+          <h3>Jason Kelley<br><span style="color:var(--muted);font-weight:400;">Principal Consultant, Kel-Tech Controls</span></h3>
+
+          <div class="credentials">
+            <div class="credential">30+ years in turnaround and project scheduling</div>
+            <div class="credential">Extensive owner-side refinery experience</div>
+            <div class="credential">Primavera P6 specialist</div>
+            <div class="credential">Planning, execution, and schedule diagnostics support</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="contact" class="section-tight">
+      <div class="container">
+        <div class="cta glass">
+          <div>
+            <div class="eyebrow">Let’s Talk</div>
+            <h2>Need a second set of eyes on an upcoming turnaround schedule?</h2>
+            <p class="lead">
+              Whether you need an independent schedule review, advisory support, or help strengthening schedule credibility before execution, Kel-Tech Controls can help.
+            </p>
+          </div>
+          <div>
+            <div class="btn-row" style="margin-top:0;">
+              <a class="btn btn-primary" href="mailto:jason.kelley@keltechcontrols.com?subject=Kel-Tech%20Controls%20Inquiry">Email Jason</a>
+              <a class="btn btn-secondary" href="https://www.linkedin.com/in/jason-kelley-pmp-21aa15128" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+            <p class="small" style="margin-top:16px;">
+              Email: jason.kelley@keltechcontrols.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <div class="footer-logo">Kel <span>Tech</span> Controls</div>
-    <p>Turnaround Scheduling &amp; Project Controls Support</p>
-    <p>© 2026 Kel Tech Controls</p>
+    <div class="container footer-row">
+      <div class="small">© 2026 Kel-Tech Controls, LLC. All rights reserved.</div>
+      <div class="small">Turnaround Scheduling • Schedule Doctor • Project Controls Support</div>
+    </div>
   </footer>
 </body>
 </html>
