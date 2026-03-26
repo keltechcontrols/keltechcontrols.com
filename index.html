@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kel-Tech Controls | Turnaround Scheduling & Project Controls</title>
-  <meta name="description" content="Kel-Tech Controls provides turnaround scheduling, Primavera P6 support, Schedule Doctor remote schedule diagnostics, and project controls consulting for refineries and industrial facilities." />
+  <title>Kel-Tech Controls | Turnaround Scheduling and Project Controls</title>
+  <meta name="description" content="Kel-Tech Controls provides turnaround scheduling, Primavera P6 support, Schedule Doctor remote schedule diagnostics, project controls consulting, and one-on-one scheduler development for refineries and industrial facilities." />
   <style>
     :root{
       --bg:#08111f;
       --bg2:#0d1b2e;
       --panel:rgba(255,255,255,.06);
-      --panel-strong:rgba(255,255,255,.09);
+      --panel2:rgba(255,255,255,.04);
       --text:#eef4ff;
       --muted:#b9c7da;
       --line:rgba(255,255,255,.12);
@@ -37,7 +37,6 @@
     }
 
     a{color:inherit;text-decoration:none}
-    img{max-width:100%}
     .container{width:min(var(--max), calc(100% - 32px)); margin:0 auto}
     .section{padding:88px 0}
     .section-tight{padding:64px 0}
@@ -66,7 +65,7 @@
       line-height:1.2;
     }
     p{margin:0 0 18px;color:var(--muted);font-size:1.03rem}
-    .lead{font-size:1.12rem; color:#dbe8f8}
+    .lead{font-size:1.12rem;color:#dbe8f8}
     .glass{
       background:var(--panel);
       border:1px solid var(--line);
@@ -80,6 +79,7 @@
       border:1px solid var(--line);
       border-radius:20px;
       box-shadow:var(--shadow);
+      height:100%;
     }
     .btn-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
     .btn{
@@ -118,7 +118,7 @@
       border-bottom:1px solid rgba(255,255,255,.08);
     }
     .nav{
-      min-height:72px;
+      min-height:78px;
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -131,9 +131,9 @@
       min-width:0;
     }
     .brand-mark{
-      width:44px;
-      height:44px;
-      flex:0 0 44px;
+      width:56px;
+      height:56px;
+      flex:0 0 56px;
     }
     .brand-text{
       display:flex;
@@ -141,12 +141,12 @@
       min-width:0;
     }
     .brand-text strong{
-      font-size:1rem;
+      font-size:1.05rem;
       line-height:1.05;
       letter-spacing:.01em;
     }
     .brand-text span{
-      font-size:.8rem;
+      font-size:.82rem;
       color:var(--muted);
       white-space:nowrap;
       overflow:hidden;
@@ -167,20 +167,13 @@
 
     .hero{
       padding:78px 0 50px;
-      position:relative;
       overflow:hidden;
     }
     .hero-grid{
       display:grid;
-      grid-template-columns: 1.1fr .9fr;
+      grid-template-columns: 1.15fr .85fr;
       gap:28px;
       align-items:stretch;
-    }
-    .hero-copy{
-      padding:10px 0;
-    }
-    .hero-copy .sublead{
-      max-width:720px;
     }
     .hero-panel{
       padding:24px;
@@ -220,15 +213,13 @@
       font-size:.92rem;
     }
 
-    .doctor{
-      position:relative;
-    }
-    .doctor-grid{
+    .two-col{
       display:grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns:1fr 1fr;
       gap:24px;
       align-items:stretch;
     }
+
     .doctor-brand{
       display:flex;
       align-items:center;
@@ -236,10 +227,10 @@
       margin-bottom:16px;
     }
     .doctor-logo{
-      width:72px;
-      height:72px;
-      flex:0 0 72px;
-      border-radius:18px;
+      width:88px;
+      height:88px;
+      flex:0 0 88px;
+      border-radius:20px;
       background:linear-gradient(145deg, rgba(126,211,252,.12), rgba(98,227,214,.08));
       border:1px solid var(--line);
       display:grid;
@@ -247,12 +238,14 @@
     }
     .doctor-brand-text strong{
       display:block;
-      font-size:1.2rem;
+      font-size:1.38rem;
+      letter-spacing:.01em;
     }
     .doctor-brand-text span{
       color:var(--muted);
-      font-size:.95rem;
+      font-size:.96rem;
     }
+
     .pill-grid{
       display:grid;
       grid-template-columns:repeat(2,minmax(0,1fr));
@@ -269,33 +262,42 @@
       font-size:.95rem;
     }
 
-    .services-grid{
+    .three-col{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:22px;
     }
-    .card ul{
-      margin:14px 0 0;
-      padding:0;
-      list-style:none;
-    }
-    .card li{
-      padding:10px 0;
-      border-top:1px solid rgba(255,255,255,.08);
-      color:var(--muted);
-    }
-    .card li:first-child{border-top:none;padding-top:0}
 
-    .process-grid{
+    .four-col{
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:18px;
     }
+
+    .card ul,
+    .checklist{
+      margin:14px 0 0;
+      padding:0;
+      list-style:none;
+    }
+    .card li,
+    .checklist li{
+      padding:10px 0;
+      border-top:1px solid rgba(255,255,255,.08);
+      color:var(--muted);
+    }
+    .card li:first-child,
+    .checklist li:first-child{
+      border-top:none;
+      padding-top:0;
+    }
+
     .step{
       padding:22px;
       border-radius:20px;
       background:rgba(255,255,255,.04);
       border:1px solid var(--line);
+      height:100%;
     }
     .step-number{
       display:inline-grid;
@@ -309,11 +311,6 @@
       font-weight:800;
     }
 
-    .about-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:24px;
-    }
     .credentials{
       display:grid;
       grid-template-columns:repeat(2,1fr);
@@ -329,12 +326,12 @@
       color:#e4edf8;
     }
 
-    .cta{
-      padding:30px;
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:24px;
-      align-items:center;
+    .highlight-box{
+      padding:28px;
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
     }
 
     footer{
@@ -352,15 +349,11 @@
 
     @media (max-width: 980px){
       .hero-grid,
-      .doctor-grid,
-      .about-grid,
-      .cta{
+      .two-col,
+      .three-col{
         grid-template-columns:1fr;
       }
-      .services-grid{
-        grid-template-columns:1fr;
-      }
-      .process-grid{
+      .four-col{
         grid-template-columns:1fr 1fr;
       }
     }
@@ -378,7 +371,7 @@
       .stats,
       .pill-grid,
       .credentials,
-      .process-grid{
+      .four-col{
         grid-template-columns:1fr;
       }
       .hero{
@@ -386,6 +379,9 @@
       }
       .section{
         padding:72px 0;
+      }
+      .section-tight{
+        padding:54px 0;
       }
     }
   </style>
@@ -396,30 +392,34 @@
     <div class="container nav">
       <a class="brand" href="#top">
         <div class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 64 64" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 72 72" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="ktg" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+              <linearGradient id="ktg2" x1="10" y1="8" x2="62" y2="64" gradientUnits="userSpaceOnUse">
                 <stop stop-color="#7DD3FC"/>
                 <stop offset="1" stop-color="#62E3D6"/>
               </linearGradient>
             </defs>
-            <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#ktg)" fill-opacity=".12" stroke="rgba(255,255,255,.2)"/>
-            <path d="M19 18V46" stroke="url(#ktg)" stroke-width="5" stroke-linecap="round"/>
-            <path d="M45 18L28 32L45 46" stroke="url(#ktg)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M23 32H41" stroke="#FFD166" stroke-width="4" stroke-linecap="round"/>
+            <rect x="5" y="5" width="62" height="62" rx="18" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.18)"/>
+            <path d="M20 18V54" stroke="url(#ktg2)" stroke-width="6" stroke-linecap="round"/>
+            <path d="M49 18L31 36L49 54" stroke="url(#ktg2)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M27 36H46" stroke="#FFD166" stroke-width="4.5" stroke-linecap="round"/>
+            <circle cx="54" cy="18" r="3" fill="#FFD166"/>
+            <circle cx="54" cy="54" r="3" fill="#62E3D6"/>
           </svg>
         </div>
         <div class="brand-text">
           <strong>Kel-Tech Controls</strong>
-          <span>Turnaround Scheduling & Project Controls</span>
+          <span>Turnaround Scheduling and Project Controls</span>
         </div>
       </a>
 
       <nav class="nav-links">
         <a href="#schedule-doctor">Schedule Doctor</a>
         <a href="#services">Services</a>
-        <a href="#process">How It Works</a>
-        <a href="#about">About</a>
+        <a href="#consulting">Consulting</a>
+        <a href="#who">Who It Helps</a>
+        <a href="#path">Engagement Path</a>
+        <a href="#intake">Intake</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -428,18 +428,18 @@
   <main id="top">
     <section class="hero">
       <div class="container hero-grid">
-        <div class="hero-copy">
+        <div>
           <div class="eyebrow">Independent Turnaround Support</div>
           <h1>Turnaround schedules that hold up in the field.</h1>
-          <p class="lead sublead">
-            Kel-Tech Controls provides turnaround scheduling, Primavera P6 support, and project controls guidance for refineries and industrial facilities — with practical owner-side experience behind every review.
+          <p class="lead">
+            Kel-Tech Controls provides turnaround scheduling, Primavera P6 support, project controls guidance, and one-on-one scheduler development for refineries and industrial facilities.
           </p>
           <p>
-            From schedule development and recovery planning to remote diagnostics and advisory support, the goal is simple: identify risk early, improve schedule credibility, and help teams execute with confidence.
+            From schedule development and recovery planning to remote diagnostics and practical coaching, the goal is simple: identify risk early, improve schedule credibility, and help teams execute with confidence.
           </p>
           <div class="btn-row">
             <a class="btn btn-primary" href="mailto:jason.kelley@keltechcontrols.com?subject=Schedule%20Review%20Inquiry">Request a Schedule Review</a>
-            <a class="btn btn-secondary" href="#schedule-doctor">Explore Schedule Doctor</a>
+            <a class="btn btn-secondary" href="#consulting">Explore One On One Consulting</a>
           </div>
         </div>
 
@@ -449,7 +449,6 @@
           <p>
             Many organizations do not need a permanent scheduler year-round. Remote support gives teams access to seasoned turnaround and project controls insight when it matters most.
           </p>
-
           <div class="stats">
             <div class="stat">
               <strong>30+</strong>
@@ -472,27 +471,30 @@
       </div>
     </section>
 
-    <section id="schedule-doctor" class="section doctor">
-      <div class="container doctor-grid">
+    <section id="schedule-doctor" class="section">
+      <div class="container two-col">
         <div class="glass" style="padding:32px;">
           <div class="doctor-brand">
             <div class="doctor-logo" aria-hidden="true">
-              <svg viewBox="0 0 80 80" width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 96 96" width="62" height="62" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                  <linearGradient id="sdg" x1="14" y1="12" x2="66" y2="68" gradientUnits="userSpaceOnUse">
+                  <linearGradient id="sdg2" x1="18" y1="14" x2="78" y2="82" gradientUnits="userSpaceOnUse">
                     <stop stop-color="#7DD3FC"/>
                     <stop offset="1" stop-color="#62E3D6"/>
                   </linearGradient>
                 </defs>
-                <rect x="12" y="16" width="42" height="30" rx="8" stroke="url(#sdg)" stroke-width="4"/>
-                <path d="M20 56H46" stroke="url(#sdg)" stroke-width="4" stroke-linecap="round"/>
-                <path d="M28 46V56" stroke="url(#sdg)" stroke-width="4" stroke-linecap="round"/>
-                <path d="M38 46V56" stroke="url(#sdg)" stroke-width="4" stroke-linecap="round"/>
-                <path d="M23 31H31V39H23V31Z" fill="#FFD166"/>
-                <path d="M34 27H42V39H34V27Z" fill="#7DD3FC"/>
-                <path d="M45 23H53V39H45V23Z" fill="#62E3D6"/>
-                <path d="M55 24C55 18.477 59.477 14 65 14C70.523 14 75 18.477 75 24C75 28.91 71.46 33.005 66.8 33.87V42C66.8 47.413 62.413 51.8 57 51.8H52" stroke="url(#sdg)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="65" cy="24" r="5.5" fill="none" stroke="#FFD166" stroke-width="3"/>
+                <rect x="14" y="20" width="46" height="34" rx="8" stroke="url(#sdg2)" stroke-width="4"/>
+                <path d="M24 64H50" stroke="url(#sdg2)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M31 54V64" stroke="url(#sdg2)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M43 54V64" stroke="url(#sdg2)" stroke-width="4" stroke-linecap="round"/>
+                <line x1="20" y1="30" x2="54" y2="30" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+                <line x1="20" y1="38" x2="54" y2="38" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+                <line x1="20" y1="46" x2="54" y2="46" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+                <rect x="22" y="26.5" width="14" height="6" rx="3" fill="#FFD166"/>
+                <rect x="32" y="34.5" width="16" height="6" rx="3" fill="#7DD3FC"/>
+                <rect x="27" y="42.5" width="22" height="6" rx="3" fill="#62E3D6"/>
+                <path d="M66 22C66 16.477 70.477 12 76 12C81.523 12 86 16.477 86 22C86 26.91 82.46 31.005 77.8 31.87V44C77.8 50.075 72.875 55 66.8 55H58" stroke="url(#sdg2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="76" cy="22" r="5.5" fill="none" stroke="#FFD166" stroke-width="3"/>
               </svg>
             </div>
             <div class="doctor-brand-text">
@@ -501,38 +503,32 @@
             </div>
           </div>
 
-          <div class="eyebrow">A Virtual House Call for Your P6 Schedule</div>
+          <div class="eyebrow">A Virtual House Call For Your P6 Schedule</div>
           <h2>Expert review without waiting on a site visit.</h2>
           <p class="lead">
             Many turnaround schedules look solid at a glance but contain logic breaks, hidden float risk, manpower loading issues, or inspection integration gaps that do not show up until execution is underway.
           </p>
           <p>
-            Schedule Doctor makes remote support feel like an advantage, not a compromise. Teams can send a Primavera P6 export, review findings by screen share, and receive practical recommendations quickly — often before travel for a site visit would even be arranged.
-          </p>
-          <p>
-            That means faster diagnostics, lower overhead, and clear action items your team can use right away.
+            Schedule Doctor makes remote support feel like an advantage, not a compromise. Teams can send a Primavera P6 export, review findings by screen share, and receive practical recommendations quickly, often before travel for a site visit would even be arranged.
           </p>
         </div>
 
         <div class="glass" style="padding:32px;">
-          <div class="eyebrow">How It Works</div>
-          <h3>Simple, fast, and focused on what matters.</h3>
+          <div class="eyebrow">What A Review Can Uncover</div>
+          <h3>Fast diagnostics with practical next steps.</h3>
           <div class="pill-grid">
-            <div class="pill">Send Schedule Export</div>
-            <div class="pill">Independent Remote Review</div>
-            <div class="pill">Screen-Share Findings</div>
-            <div class="pill">Written Recommendations</div>
-            <div class="pill">Identify Risk Early</div>
-            <div class="pill">Improve Execution Readiness</div>
+            <div class="pill">Logic integrity and open ends</div>
+            <div class="pill">Critical path and float path issues</div>
+            <div class="pill">Shutdown and startup sequencing</div>
+            <div class="pill">Craft loading imbalance</div>
+            <div class="pill">Inspection integration gaps</div>
+            <div class="pill">Schedule quality concerns</div>
           </div>
-
-          <div style="margin-top:24px;padding:22px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line);">
-            <h3 style="margin-bottom:12px;">What a review can uncover</h3>
-            <p style="margin-bottom:10px;">Logic integrity and open ends</p>
-            <p style="margin-bottom:10px;">Critical path and float path issues</p>
-            <p style="margin-bottom:10px;">Shutdown and startup sequencing concerns</p>
-            <p style="margin-bottom:10px;">Craft loading and manpower imbalance</p>
-            <p style="margin-bottom:0;">Inspection integration and schedule quality gaps</p>
+          <div style="margin-top:22px;">
+            <p><strong style="color:#fff;">Remote value:</strong> lower overhead, faster feedback, easier access to experienced review, and recommendations your team can act on immediately.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="mailto:jason.kelley@keltechcontrols.com?subject=Schedule%20Doctor%20Review">Ask About Schedule Doctor</a>
           </div>
         </div>
       </div>
@@ -541,57 +537,207 @@
     <section id="services" class="section">
       <div class="container">
         <div class="eyebrow">Services</div>
-        <h2>Practical support across turnaround planning and execution.</h2>
-        <p class="lead" style="max-width:760px;">
-          Kel-Tech Controls supports refineries and industrial facilities with targeted scheduling, diagnostics, advisory services, and project controls support.
+        <h2>Project controls support built around real turnaround execution.</h2>
+        <p class="lead" style="max-width:780px;">
+          Kel-Tech Controls supports refineries and industrial facilities with targeted scheduling, diagnostics, advisory services, and project controls support across the lifecycle of a turnaround or project.
         </p>
 
-        <div class="services-grid" style="margin-top:28px;">
+        <div class="three-col" style="margin-top:28px;">
           <div class="card">
             <h3>Turnaround Scheduling</h3>
-            <p>Support built around schedules that reflect how work is actually executed in the field.</p>
             <ul>
               <li>Primavera P6 schedule development</li>
               <li>Shutdown and startup sequencing</li>
               <li>Schedule recovery and compression planning</li>
               <li>Schedule updates and execution support</li>
+              <li>Schedule archiving</li>
             </ul>
           </div>
 
           <div class="card">
             <h3>Project Controls Support</h3>
-            <p>Disciplined controls support without the overhead of adding full-time internal staff.</p>
             <ul>
               <li>P6 database and dictionary setup</li>
               <li>Estimate development and validation</li>
+              <li>Estimate mechanics checks</li>
               <li>Reporting and dashboard development</li>
               <li>Earned Value and Earned Schedule analysis</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Advisory & Coaching</h3>
-            <p>Flexible guidance for planners, schedulers, and teams who want practical development.</p>
+            <h3>Assurance And Review</h3>
             <ul>
-              <li>Short consultation sessions</li>
-              <li>Scheduler development and mentoring</li>
-              <li>P6 fundamentals and real-world application</li>
-              <li>Turnaround planning best practices</li>
+              <li>Schedule mechanics checks</li>
+              <li>Critical path reviews</li>
+              <li>Schedule assurance and quality checks</li>
+              <li>Manpower density studies</li>
+              <li>Readiness reviews</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="process" class="section-tight">
+    <section id="consulting" class="section-tight">
+      <div class="container">
+        <div class="eyebrow">One On One Consulting</div>
+        <h2>Practical scheduler development for individuals and teams.</h2>
+        <p class="lead" style="max-width:790px;">
+          In addition to project support, Kel-Tech Controls offers one-on-one coaching for planners, coordinators, and developing schedulers who want more than generic software training.
+        </p>
+
+        <div class="three-col" style="margin-top:28px;">
+          <div class="card">
+            <h3>Structured Development</h3>
+            <ul>
+              <li>P6 fundamentals</li>
+              <li>Logic development and common mistakes</li>
+              <li>Critical path and float interpretation</li>
+              <li>Turnaround schedule structure</li>
+              <li>Inspection integration and sequencing</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Real World Learning</h3>
+            <ul>
+              <li>Less formal, experience-based sessions</li>
+              <li>Day in the life of a scheduler walkthroughs</li>
+              <li>How planning and execution really connect</li>
+              <li>Practical problem-solving discussions</li>
+              <li>Owner-side and contractor-side perspective</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Typical Session Focus</h3>
+            <ul>
+              <li>P6 technical confidence</li>
+              <li>Turnaround concepts that courses miss</li>
+              <li>How a real scheduler thinks day to day</li>
+              <li>Career positioning and role alignment</li>
+              <li>Practical growth, not filler training</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="who" class="section-tight">
+      <div class="container">
+        <div class="eyebrow">Who This Helps</div>
+        <h2>Built for people trying to move from exposure to real capability.</h2>
+        <div class="three-col" style="margin-top:28px;">
+          <div class="card">
+            <h3>Planners Moving Toward Scheduling</h3>
+            <p>
+              For maintenance or TA planners who are around P6 and schedules, but want to understand how to actually build, interpret, and manage them.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Coordinators Expanding Their Role</h3>
+            <p>
+              For professionals who already work around turnaround planning and execution and want stronger technical and practical scheduling skills.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Developing Schedulers</h3>
+            <p>
+              For people who know the software basics but want owner-side insight, better judgment, and real-world application that improves credibility fast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="path" class="section-tight">
+      <div class="container">
+        <div class="eyebrow">Sample Engagement Path</div>
+        <h2>A simple path from assessment to real progress.</h2>
+        <div class="four-col" style="margin-top:26px;">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Initial Assessment</h3>
+            <p>A short intake identifies current P6 knowledge, turnaround exposure, target role, and the best place to begin.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Focused Development</h3>
+            <p>A targeted package builds fundamentals, turnaround concepts, and practical understanding without wasting time.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Real World Application</h3>
+            <p>Sessions can shift into day-in-the-life discussions, real schedule examples, and problem-solving scenarios.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Follow On Growth</h3>
+            <p>Additional coaching can then move into schedule quality reviews, deeper analysis, and more advanced support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="intake" class="section">
+      <div class="container">
+        <div class="eyebrow">Initial Assessment</div>
+        <h2>Start with a focused intake so time is spent where it matters.</h2>
+        <p class="lead" style="max-width:790px;">
+          For one-on-one development engagements, the process typically begins with a short assessment. This allows sessions to be tailored to the individual’s experience level, goals, and target role.
+        </p>
+
+        <div class="three-col" style="margin-top:28px;">
+          <div class="card">
+            <h3>Background</h3>
+            <ul class="checklist">
+              <li>Current role and years of experience</li>
+              <li>Exposure to maintenance, projects, or turnarounds</li>
+              <li>Past roles such as planner, coordinator, or scheduler</li>
+              <li>Target path and career direction</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>P6 And Fundamentals</h3>
+            <ul class="checklist">
+              <li>Current Primavera P6 experience</li>
+              <li>Comfort with logic, critical path, and float</li>
+              <li>What has been built, updated, or reviewed in P6</li>
+              <li>Current strengths and known gaps</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Turnaround Focus</h3>
+            <ul class="checklist">
+              <li>Owner-side or contractor-side interest</li>
+              <li>Exposure to shutdown and startup sequencing</li>
+              <li>Inspection integration understanding</li>
+              <li>Specific areas the individual wants to improve</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="highlight-box" style="margin-top:24px;">
+          <h3 style="margin-bottom:12px;">Start with a focused initial assessment</h3>
+          <p>
+            The assessment helps identify current Primavera P6 knowledge, turnaround exposure, target role, and the most useful development path. That makes the first session more productive and keeps paid time focused on real progress.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://forms.gle/xGJ5X5MMnMQoocQR9" target="_blank" rel="noopener">Start Initial Assessment</a>
+            <a class="btn btn-secondary" href="mailto:jason.kelley@keltechcontrols.com?subject=Initial%20Assessment%20Questions">Ask A Question First</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
       <div class="container">
         <div class="eyebrow">Remote Value</div>
         <h2>Why remote support works.</h2>
-        <p class="lead" style="max-width:760px;">
-          Remote review is not a lesser option. In many cases it is the fastest path to actionable insight, especially early in planning or when quick diagnostics are needed.
-        </p>
-
-        <div class="process-grid" style="margin-top:26px;">
+        <div class="four-col" style="margin-top:26px;">
           <div class="step">
             <div class="step-number">1</div>
             <h3>Fast access</h3>
@@ -616,8 +762,8 @@
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="container about-grid">
+    <section class="section">
+      <div class="container two-col">
         <div class="glass" style="padding:32px;">
           <div class="eyebrow">About</div>
           <h2>Owner-side refinery experience that translates into practical guidance.</h2>
@@ -625,10 +771,10 @@
             Jason Kelley brings decades of turnaround and project scheduling experience with a strong focus on owner-side execution realities.
           </p>
           <p>
-            That perspective matters. Good schedules are not just technically correct — they need to support how operations, maintenance, inspection, and leadership actually make decisions and execute work during an event.
+            Good schedules are not just technically correct. They need to support how operations, maintenance, inspection, and leadership actually make decisions and execute work during an event.
           </p>
           <p>
-            Kel-Tech Controls was built to provide that level of practical support in a flexible, accessible format.
+            Kel-Tech Controls was built to provide that level of practical support in a flexible, accessible format, whether the need is schedule review, controls support, or targeted development of the next scheduler.
           </p>
         </div>
 
@@ -637,7 +783,7 @@
           <h3>Jason Kelley<br><span style="color:var(--muted);font-weight:400;">Principal Consultant, Kel-Tech Controls</span></h3>
 
           <div class="credentials">
-            <div class="credential">30+ years in turnaround and project scheduling</div>
+            <div class="credential">30 plus years in turnaround and project scheduling</div>
             <div class="credential">Extensive owner-side refinery experience</div>
             <div class="credential">Primavera P6 specialist</div>
             <div class="credential">Planning, execution, and schedule diagnostics support</div>
@@ -648,22 +794,22 @@
 
     <section id="contact" class="section-tight">
       <div class="container">
-        <div class="cta glass">
-          <div>
-            <div class="eyebrow">Let’s Talk</div>
-            <h2>Need a second set of eyes on an upcoming turnaround schedule?</h2>
-            <p class="lead">
-              Whether you need an independent schedule review, advisory support, or help strengthening schedule credibility before execution, Kel-Tech Controls can help.
-            </p>
-          </div>
-          <div>
-            <div class="btn-row" style="margin-top:0;">
-              <a class="btn btn-primary" href="mailto:jason.kelley@keltechcontrols.com?subject=Kel-Tech%20Controls%20Inquiry">Email Jason</a>
-              <a class="btn btn-secondary" href="https://www.linkedin.com/in/jason-kelley-pmp-21aa15128" target="_blank" rel="noopener">LinkedIn</a>
+        <div class="glass" style="padding:30px;">
+          <div class="two-col">
+            <div>
+              <div class="eyebrow">Let’s Talk</div>
+              <h2>Need a second set of eyes on a schedule or a path forward for scheduler development?</h2>
+              <p class="lead">
+                Whether you need an independent turnaround schedule review, project controls support, or one-on-one development for a planner or scheduler, Kel-Tech Controls can help.
+              </p>
             </div>
-            <p class="small" style="margin-top:16px;">
-              Email: jason.kelley@keltechcontrols.com
-            </p>
+            <div>
+              <div class="btn-row" style="margin-top:0;">
+                <a class="btn btn-primary" href="mailto:jason.kelley@keltechcontrols.com?subject=Kel-Tech%20Controls%20Inquiry">Email Jason</a>
+                <a class="btn btn-secondary" href="https://www.linkedin.com/in/jason-kelley-pmp-21aa15128" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+              <p class="small" style="margin-top:16px;">jason.kelley@keltechcontrols.com</p>
+            </div>
           </div>
         </div>
       </div>
@@ -673,7 +819,7 @@
   <footer>
     <div class="container footer-row">
       <div class="small">© 2026 Kel-Tech Controls, LLC. All rights reserved.</div>
-      <div class="small">Turnaround Scheduling • Schedule Doctor • Project Controls Support</div>
+      <div class="small">Turnaround Scheduling | Schedule Doctor | Project Controls | One On One Development</div>
     </div>
   </footer>
 </body>
