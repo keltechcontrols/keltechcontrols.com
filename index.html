@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kel Tech Controls | Turnaround Scheduling and Project Controls</title>
-  <meta name="description" content="Kel Tech Controls provides turnaround scheduling, Primavera P6 support, Schedule Doctor remote schedule diagnostics, project controls consulting, and one-on-one scheduler development for refineries and industrial facilities." />
+  <title>Keltech Controls | Turnaround Scheduling and Project Controls</title>
+  <meta name="description" content="Keltech Controls provides turnaround scheduling, Primavera P6 support, Schedule Doctor remote schedule diagnostics, project controls consulting, and one-on-one scheduler development for refineries and industrial facilities." />
   <style>
     :root{
       --bg:#08111f;
@@ -16,8 +16,9 @@
       --line:rgba(255,255,255,.12);
       --blue:#5eb6ff;
       --blue2:#7dd3fc;
-      --teal:#62e3d6;
-      --gold:#ffd166;
+      --teal:#55A99A;
+      --teal-light:#62e3d6;
+      --gold:#F5B235;
       --shadow:0 20px 60px rgba(0,0,0,.35);
       --radius:22px;
       --max:1180px;
@@ -31,7 +32,7 @@
       color:var(--text);
       background:
         radial-gradient(circle at top right, rgba(94,182,255,.12), transparent 30%),
-        radial-gradient(circle at 15% 20%, rgba(98,227,214,.10), transparent 25%),
+        radial-gradient(circle at 15% 20%, rgba(85,169,154,.10), transparent 25%),
         linear-gradient(180deg, #08111f 0%, #091525 35%, #0c1a2d 100%);
       line-height:1.55;
     }
@@ -50,27 +51,16 @@
       font-weight:700;
     }
     h1,h2,h3{margin:0 0 16px}
-    h1{
-      font-size:clamp(2.4rem, 5vw, 5rem);
-      line-height:.98;
-      letter-spacing:-.03em;
-    }
-    h2{
-      font-size:clamp(1.9rem, 3.8vw, 3rem);
-      line-height:1.04;
-      letter-spacing:-.02em;
-    }
-    h3{
-      font-size:1.15rem;
-      line-height:1.2;
-    }
+    h1{font-size:clamp(2.4rem,5vw,5rem);line-height:.98;letter-spacing:-.03em}
+    h2{font-size:clamp(1.9rem,3.8vw,3rem);line-height:1.04;letter-spacing:-.02em}
+    h3{font-size:1.15rem;line-height:1.2}
     p{margin:0 0 18px;color:var(--muted);font-size:1.03rem}
     .lead{font-size:1.12rem;color:#dbe8f8}
     .glass{
       background:var(--panel);
       border:1px solid var(--line);
       border-radius:var(--radius);
-      backdrop-filter: blur(10px);
+      backdrop-filter:blur(10px);
       box-shadow:var(--shadow);
     }
     .card{
@@ -84,9 +74,25 @@
     .highlight-box{
       padding:28px;
       border-radius:22px;
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
       border:1px solid var(--line);
       box-shadow:var(--shadow);
+    }
+
+    /* tagline pill used in hero */
+    .tagline-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 16px;
+      border-radius:999px;
+      background:rgba(85,169,154,.12);
+      border:1px solid rgba(85,169,154,.30);
+      color:var(--teal);
+      font-size:.88rem;
+      font-weight:600;
+      letter-spacing:.03em;
+      margin-bottom:20px;
     }
 
     .btn-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
@@ -102,9 +108,9 @@
       border:1px solid transparent;
     }
     .btn-primary{
-      background:linear-gradient(135deg, var(--blue), var(--teal));
+      background:linear-gradient(135deg,var(--teal),var(--teal-light));
       color:#07111b;
-      box-shadow:0 12px 30px rgba(94,182,255,.28);
+      box-shadow:0 12px 30px rgba(85,169,154,.30);
     }
     .btn-primary:hover{transform:translateY(-1px)}
     .btn-secondary{
@@ -112,346 +118,138 @@
       background:rgba(255,255,255,.04);
       color:var(--text);
     }
-    .btn-secondary:hover{
-      background:rgba(255,255,255,.08);
-      transform:translateY(-1px);
-    }
+    .btn-secondary:hover{background:rgba(255,255,255,.08);transform:translateY(-1px)}
 
     .nav-wrap{
-      position:sticky;
-      top:0;
-      z-index:100;
-      backdrop-filter: blur(14px);
+      position:sticky;top:0;z-index:100;
+      backdrop-filter:blur(14px);
       background:rgba(8,17,31,.72);
       border-bottom:1px solid rgba(255,255,255,.08);
     }
     .nav{
       min-height:80px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
+      display:flex;align-items:center;justify-content:space-between;gap:18px;
     }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      min-width:0;
-    }
-    .brand-mark{
-      width:60px;
-      height:60px;
-      flex:0 0 60px;
-    }
-    .brand-text{
-      display:flex;
-      flex-direction:column;
-      min-width:0;
-    }
-    .brand-text strong{
-      font-size:1.08rem;
-      line-height:1.05;
-      letter-spacing:.01em;
-    }
-    .brand-text span{
-      font-size:.82rem;
-      color:var(--muted);
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:18px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    .nav-links a{
-      color:var(--muted);
-      font-size:.95rem;
-    }
+    .brand{display:flex;align-items:center;gap:14px;min-width:0}
+    .brand-mark{width:52px;height:52px;flex:0 0 52px}
+    .brand-text{display:flex;flex-direction:column;min-width:0}
+    .brand-text strong{font-size:1.05rem;line-height:1.1;letter-spacing:.01em}
+    .brand-text span{font-size:.78rem;color:var(--teal);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .nav-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+    .nav-links a{color:var(--muted);font-size:.95rem}
     .nav-links a:hover{color:var(--text)}
 
-    .hero{
-      padding:78px 0 50px;
-      overflow:hidden;
-    }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:28px;
-      align-items:stretch;
-    }
-    .hero-panel{
-      padding:24px;
-      position:relative;
-      overflow:hidden;
-    }
+    .hero{padding:78px 0 50px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:stretch}
+    .hero-panel{padding:24px;position:relative;overflow:hidden}
     .hero-panel::before{
-      content:"";
-      position:absolute;
-      inset:auto -40px -40px auto;
-      width:220px;
-      height:220px;
-      background:radial-gradient(circle, rgba(94,182,255,.22), transparent 62%);
+      content:"";position:absolute;inset:auto -40px -40px auto;
+      width:220px;height:220px;
+      background:radial-gradient(circle,rgba(85,169,154,.18),transparent 62%);
       pointer-events:none;
     }
-
-    .hero-brand{
-      display:flex;
-      align-items:center;
-      gap:18px;
-      margin-bottom:18px;
-    }
+    .hero-brand{display:flex;align-items:center;gap:18px;margin-bottom:18px}
     .hero-brand-mark{
-      width:84px;
-      height:84px;
-      flex:0 0 84px;
-      border-radius:24px;
-      display:grid;
-      place-items:center;
+      width:84px;height:84px;flex:0 0 84px;border-radius:24px;
+      display:grid;place-items:center;
       background:rgba(255,255,255,.04);
       border:1px solid var(--line);
       box-shadow:var(--shadow);
     }
-    .hero-brand-copy strong{
-      display:block;
-      font-size:1.5rem;
-      margin-bottom:4px;
-    }
-    .hero-brand-copy span{
-      color:var(--muted);
-      font-size:.98rem;
-    }
+    .hero-brand-copy strong{display:block;font-size:1.5rem;margin-bottom:4px}
+    .hero-brand-copy span{color:var(--muted);font-size:.98rem}
 
-    .stats{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:14px;
-      margin-top:22px;
-    }
-    .stat{
-      padding:18px;
-      border-radius:18px;
-      background:rgba(255,255,255,.04);
-      border:1px solid var(--line);
-    }
-    .stat strong{
-      display:block;
-      font-size:1.7rem;
-      line-height:1;
-      margin-bottom:8px;
-      color:#fff;
-    }
-    .stat span{
-      color:var(--muted);
-      font-size:.92rem;
-    }
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
+    .stat{padding:18px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+    .stat strong{display:block;font-size:1.7rem;line-height:1;margin-bottom:8px;color:#fff}
+    .stat span{color:var(--muted);font-size:.92rem}
 
-    .two-col{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:24px;
-      align-items:stretch;
-    }
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+    .three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 
-    .three-col{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:22px;
-    }
-
-    .four-col{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:18px;
-    }
-
-    .doctor-brand{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      margin-bottom:16px;
-    }
+    .doctor-brand{display:flex;align-items:center;gap:16px;margin-bottom:16px}
     .doctor-logo{
-      width:92px;
-      height:92px;
-      flex:0 0 92px;
-      border-radius:20px;
-      background:linear-gradient(145deg, rgba(126,211,252,.12), rgba(98,227,214,.08));
-      border:1px solid var(--line);
-      display:grid;
-      place-items:center;
+      width:92px;height:92px;flex:0 0 92px;border-radius:20px;
+      background:linear-gradient(145deg,rgba(126,211,252,.12),rgba(85,169,154,.08));
+      border:1px solid var(--line);display:grid;place-items:center;
     }
-    .doctor-brand-text strong{
-      display:block;
-      font-size:1.42rem;
-      letter-spacing:.01em;
-    }
-    .doctor-brand-text span{
-      color:var(--muted);
-      font-size:.97rem;
-    }
+    .doctor-brand-text strong{display:block;font-size:1.42rem;letter-spacing:.01em}
+    .doctor-brand-text span{color:var(--muted);font-size:.97rem}
 
-    .pill-grid{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:12px;
-      margin-top:16px;
-    }
+    .pill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
     .pill{
-      padding:14px 16px;
-      border-radius:16px;
-      background:rgba(255,255,255,.05);
-      border:1px solid var(--line);
-      color:#dfe8f5;
-      font-weight:600;
-      font-size:.95rem;
+      padding:14px 16px;border-radius:16px;
+      background:rgba(255,255,255,.05);border:1px solid var(--line);
+      color:#dfe8f5;font-weight:600;font-size:.95rem;
     }
 
-    .card ul,
-    .checklist{
-      margin:14px 0 0;
-      padding:0;
-      list-style:none;
-    }
-    .card li,
-    .checklist li{
-      padding:10px 0;
-      border-top:1px solid rgba(255,255,255,.08);
-      color:var(--muted);
-    }
-    .card li:first-child,
-    .checklist li:first-child{
-      border-top:none;
-      padding-top:0;
-    }
+    .card ul,.checklist{margin:14px 0 0;padding:0;list-style:none}
+    .card li,.checklist li{padding:10px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
+    .card li:first-child,.checklist li:first-child{border-top:none;padding-top:0}
 
     .package-card{
-      padding:24px;
-      border-radius:20px;
-      background:linear-gradient(180deg, rgba(94,182,255,.10), rgba(255,255,255,.04));
-      border:1px solid rgba(125,211,252,.28);
-      box-shadow:var(--shadow);
-      height:100%;
+      padding:24px;border-radius:20px;
+      background:linear-gradient(180deg,rgba(85,169,154,.10),rgba(255,255,255,.04));
+      border:1px solid rgba(85,169,154,.28);
+      box-shadow:var(--shadow);height:100%;
     }
 
-    .step{
-      padding:22px;
-      border-radius:20px;
-      background:rgba(255,255,255,.04);
-      border:1px solid var(--line);
-      height:100%;
-    }
+    .step{padding:22px;border-radius:20px;background:rgba(255,255,255,.04);border:1px solid var(--line);height:100%}
     .step-number{
-      display:inline-grid;
-      place-items:center;
-      width:34px;
-      height:34px;
-      margin-bottom:14px;
-      border-radius:999px;
-      background:linear-gradient(135deg,var(--blue),var(--teal));
-      color:#08111f;
-      font-weight:800;
+      display:inline-grid;place-items:center;width:34px;height:34px;margin-bottom:14px;
+      border-radius:999px;background:linear-gradient(135deg,var(--teal),var(--teal-light));
+      color:#08111f;font-weight:800;
     }
 
-    .credentials{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:14px;
-      margin-top:18px;
-    }
-    .credential{
-      padding:18px;
-      border-radius:18px;
-      background:rgba(255,255,255,.04);
-      border:1px solid var(--line);
-      font-weight:600;
-      color:#e4edf8;
-    }
+    .credentials{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
+    .credential{padding:18px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line);font-weight:600;color:#e4edf8}
 
-    footer{
-      padding:28px 0 50px;
-      border-top:1px solid rgba(255,255,255,.08);
-    }
-    .footer-row{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      flex-wrap:wrap;
-    }
+    footer{padding:28px 0 50px;border-top:1px solid rgba(255,255,255,.08)}
+    .footer-row{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .footer-brand{display:flex;align-items:center;gap:12px}
+    .footer-brand-text strong{display:block;font-size:.95rem;line-height:1.1}
+    .footer-brand-text span{font-size:.82rem;color:var(--teal);font-weight:600}
     .small{font-size:.92rem;color:var(--muted)}
 
-    @media (max-width: 980px){
-      .hero-grid,
-      .two-col,
-      .three-col{
-        grid-template-columns:1fr;
-      }
-      .four-col{
-        grid-template-columns:1fr 1fr;
-      }
+    @media(max-width:980px){
+      .hero-grid,.two-col,.three-col{grid-template-columns:1fr}
+      .four-col{grid-template-columns:1fr 1fr}
     }
-
-    @media (max-width: 680px){
-      .nav{
-        min-height:auto;
-        padding:14px 0;
-        align-items:flex-start;
-        flex-direction:column;
-      }
-      .nav-links{
-        justify-content:flex-start;
-      }
-      .stats,
-      .pill-grid,
-      .credentials,
-      .four-col{
-        grid-template-columns:1fr;
-      }
-      .hero{
-        padding-top:48px;
-      }
-      .section{
-        padding:72px 0;
-      }
-      .section-tight{
-        padding:54px 0;
-      }
-      .hero-brand{
-        align-items:flex-start;
-      }
+    @media(max-width:680px){
+      .nav{min-height:auto;padding:14px 0;align-items:flex-start;flex-direction:column}
+      .nav-links{justify-content:flex-start}
+      .stats,.pill-grid,.credentials,.four-col{grid-template-columns:1fr}
+      .hero{padding-top:48px}
+      .section{padding:72px 0}
+      .section-tight{padding:54px 0}
+      .hero-brand{align-items:flex-start}
     }
   </style>
 </head>
 <body>
 
+  <!-- ── NAV ── -->
   <div class="nav-wrap">
     <div class="container nav">
       <a class="brand" href="#top">
-        <div class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 76 76" width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="ktg3" x1="10" y1="8" x2="66" y2="68" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#7DD3FC"/>
-                <stop offset="1" stop-color="#62E3D6"/>
-              </linearGradient>
-            </defs>
-            <rect x="5" y="5" width="66" height="66" rx="18" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.18)"/>
-            <path d="M20 17V59" stroke="url(#ktg3)" stroke-width="6" stroke-linecap="round"/>
-            <path d="M49 18L29 37" stroke="url(#ktg3)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M29 39L49 58" stroke="url(#ktg3)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M27 25H58" stroke="#FFD166" stroke-width="4.5" stroke-linecap="round"/>
-            <path d="M42.5 25V49" stroke="#FFD166" stroke-width="4.5" stroke-linecap="round"/>
-            <circle cx="58" cy="25" r="2.8" fill="#FFD166"/>
-            <circle cx="42.5" cy="49" r="2.8" fill="#62E3D6"/>
-          </svg>
-        </div>
+        <!-- Cleaned-up KT mark: navy K + teal lower diagonal + amber T crossbar -->
+        <svg class="brand-mark" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="4" y="4" width="68" height="68" rx="18" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+          <!-- K vertical -->
+          <line x1="20" y1="18" x2="20" y2="58" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <!-- K upper diagonal -->
+          <line x1="20" y1="38" x2="46" y2="18" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <!-- K lower diagonal — teal -->
+          <line x1="20" y1="38" x2="47" y2="58" stroke="#55A99A" stroke-width="6" stroke-linecap="round"/>
+          <!-- T vertical -->
+          <line x1="54" y1="27" x2="54" y2="58" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <!-- T crossbar — amber -->
+          <line x1="38" y1="27" x2="70" y2="27" stroke="#F5B235" stroke-width="6" stroke-linecap="round"/>
+        </svg>
         <div class="brand-text">
-          <strong>Kel Tech Controls</strong>
-          <span>Turnaround Scheduling and Project Controls</span>
+          <strong>Keltech Controls</strong>
+          <span>Build it right &#x2192; Run it right</span>
         </div>
       </a>
 
@@ -468,38 +266,47 @@
   </div>
 
   <main id="top">
+
+    <!-- ── HERO ── -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
           <div class="hero-brand">
             <div class="hero-brand-mark" aria-hidden="true">
+              <!-- Larger hero mark -->
               <svg viewBox="0 0 92 92" width="68" height="68" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="ktgHero" x1="12" y1="10" x2="80" y2="82" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#7DD3FC"/>
-                    <stop offset="1" stop-color="#62E3D6"/>
-                  </linearGradient>
-                </defs>
-                <rect x="6" y="6" width="80" height="80" rx="22" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.18)"/>
-                <path d="M25 21V71" stroke="url(#ktgHero)" stroke-width="7" stroke-linecap="round"/>
-                <path d="M60 22L35 44" stroke="url(#ktgHero)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M35 47L60 70" stroke="url(#ktgHero)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M33 30H68" stroke="#FFD166" stroke-width="5" stroke-linecap="round"/>
-                <path d="M50.5 30V59" stroke="#FFD166" stroke-width="5" stroke-linecap="round"/>
-                <circle cx="68" cy="30" r="3.4" fill="#FFD166"/>
-                <circle cx="50.5" cy="59" r="3.4" fill="#62E3D6"/>
+                <rect x="5" y="5" width="82" height="82" rx="22" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+                <!-- K vertical -->
+                <line x1="24" y1="20" x2="24" y2="72" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round"/>
+                <!-- K upper diagonal -->
+                <line x1="24" y1="46" x2="56" y2="20" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round"/>
+                <!-- K lower diagonal — teal -->
+                <line x1="24" y1="46" x2="57" y2="72" stroke="#55A99A" stroke-width="7.5" stroke-linecap="round"/>
+                <!-- T vertical -->
+                <line x1="66" y1="31" x2="66" y2="72" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round"/>
+                <!-- T crossbar — amber -->
+                <line x1="46" y1="31" x2="86" y2="31" stroke="#F5B235" stroke-width="7.5" stroke-linecap="round"/>
               </svg>
             </div>
             <div class="hero-brand-copy">
-              <strong>Kel Tech Controls</strong>
+              <strong>Keltech Controls</strong>
               <span>Independent turnaround scheduling and project controls support</span>
             </div>
+          </div>
+
+          <!-- Tagline pill -->
+          <div class="tagline-pill">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <circle cx="7" cy="7" r="6" stroke="#55A99A" stroke-width="1.5"/>
+              <path d="M4 7h6M8 5l2 2-2 2" stroke="#55A99A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Build it right &#x2192; Run it right
           </div>
 
           <div class="eyebrow">Independent Turnaround Support</div>
           <h1>Turnaround schedules that hold up in the field.</h1>
           <p class="lead">
-            Kel Tech Controls provides turnaround scheduling, Primavera P6 support, project controls guidance, and one-on-one scheduler development for refineries and industrial facilities.
+            Keltech Controls provides turnaround scheduling, Primavera P6 support, project controls guidance, and one-on-one scheduler development for refineries and industrial facilities.
           </p>
           <p>
             From schedule development and recovery planning to remote diagnostics and practical coaching, the goal is simple: identify risk early, improve schedule credibility, and help teams execute with confidence.
@@ -511,7 +318,7 @@
         </div>
 
         <div class="hero-panel glass">
-          <div class="eyebrow">Why Kel Tech</div>
+          <div class="eyebrow">Why Keltech</div>
           <h3>Experienced support without the overhead of full-time staffing.</h3>
           <p>
             Many organizations do not need a permanent scheduler year-round. Remote support gives teams access to seasoned turnaround and project controls insight when it matters most.
@@ -536,16 +343,17 @@
             </div>
           </div>
 
-          <div class="highlight-box" style="margin-top:20px; padding:22px;">
+          <div class="highlight-box" style="margin-top:20px;padding:22px;">
             <h3 style="margin-bottom:10px;">One-On-One Development Available</h3>
             <p style="margin-bottom:0;">
-              Practical scheduler coaching for planners, coordinators, and developing schedulers who want real-world guidance in Primavera P6, turnaround concepts, and day to day application.
+              Practical scheduler coaching for planners, coordinators, and developing schedulers who want real-world guidance in Primavera P6, turnaround concepts, and day-to-day application.
             </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ── SCHEDULE DOCTOR ── -->
     <section id="schedule-doctor" class="section">
       <div class="container two-col">
         <div class="glass" style="padding:32px;">
@@ -555,7 +363,7 @@
                 <defs>
                   <linearGradient id="sdg2" x1="18" y1="14" x2="78" y2="82" gradientUnits="userSpaceOnUse">
                     <stop stop-color="#7DD3FC"/>
-                    <stop offset="1" stop-color="#62E3D6"/>
+                    <stop offset="1" stop-color="#55A99A"/>
                   </linearGradient>
                 </defs>
                 <rect x="14" y="20" width="46" height="34" rx="8" stroke="url(#sdg2)" stroke-width="4"/>
@@ -565,11 +373,11 @@
                 <line x1="20" y1="30" x2="54" y2="30" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
                 <line x1="20" y1="38" x2="54" y2="38" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
                 <line x1="20" y1="46" x2="54" y2="46" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
-                <rect x="22" y="26.5" width="14" height="6" rx="3" fill="#FFD166"/>
+                <rect x="22" y="26.5" width="14" height="6" rx="3" fill="#F5B235"/>
                 <rect x="32" y="34.5" width="16" height="6" rx="3" fill="#7DD3FC"/>
-                <rect x="27" y="42.5" width="22" height="6" rx="3" fill="#62E3D6"/>
+                <rect x="27" y="42.5" width="22" height="6" rx="3" fill="#55A99A"/>
                 <path d="M66 22C66 16.477 70.477 12 76 12C81.523 12 86 16.477 86 22C86 26.91 82.46 31.005 77.8 31.87V44C77.8 50.075 72.875 55 66.8 55H58" stroke="url(#sdg2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="76" cy="22" r="5.5" fill="none" stroke="#FFD166" stroke-width="3"/>
+                <circle cx="76" cy="22" r="5.5" fill="none" stroke="#F5B235" stroke-width="3"/>
               </svg>
             </div>
             <div class="doctor-brand-text">
@@ -611,34 +419,27 @@
       </div>
     </section>
 
+    <!-- ── SERVICES PREVIEW ── -->
     <section id="services-preview" class="section-tight">
       <div class="container">
-        <div class="eyebrow">Kel Tech Services</div>
+        <div class="eyebrow">Keltech Services</div>
         <h2>Broader project controls support, not just reviews and coaching.</h2>
         <p class="lead" style="max-width:780px;">
-          In addition to Schedule Doctor and one-on-one development, Kel Tech Controls provides practical scheduling and project controls support for refineries and industrial facilities across planning, readiness, and execution.
+          In addition to Schedule Doctor and one-on-one development, Keltech Controls provides practical scheduling and project controls support for refineries and industrial facilities across planning, readiness, and execution.
         </p>
 
         <div class="three-col" style="margin-top:28px;">
           <div class="card">
             <h3>Turnaround Scheduling</h3>
-            <p>
-              Primavera P6 schedule development, shutdown and startup sequencing, schedule recovery planning, updates, and execution support.
-            </p>
+            <p>Primavera P6 schedule development, shutdown and startup sequencing, schedule recovery planning, updates, and execution support.</p>
           </div>
-
           <div class="card">
             <h3>Project Controls</h3>
-            <p>
-              P6 database setup, estimate development and validation, reporting, dashboard development, and earned value support.
-            </p>
+            <p>P6 database setup, estimate development and validation, reporting, dashboard development, and earned value support.</p>
           </div>
-
           <div class="card">
             <h3>Reviews And Readiness</h3>
-            <p>
-              Schedule mechanics checks, critical path reviews, quality checks, manpower density studies, and readiness reviews.
-            </p>
+            <p>Schedule mechanics checks, critical path reviews, quality checks, manpower density studies, and readiness reviews.</p>
           </div>
         </div>
 
@@ -648,12 +449,13 @@
       </div>
     </section>
 
+    <!-- ── CONSULTING ── -->
     <section id="consulting" class="section-tight">
       <div class="container">
         <div class="eyebrow">One-On-One Consulting</div>
         <h2>Practical scheduler development built around real turnaround work.</h2>
         <p class="lead" style="max-width:790px;">
-          Kel Tech Controls offers one-on-one consulting for planners, coordinators, and developing schedulers who want more than generic software training. The focus is practical growth in Primavera P6, turnaround concepts, and how scheduling is actually applied in the field.
+          Keltech Controls offers one-on-one consulting for planners, coordinators, and developing schedulers who want more than generic software training. The focus is practical growth in Primavera P6, turnaround concepts, and how scheduling is actually applied in the field.
         </p>
 
         <div class="three-col" style="margin-top:28px;">
@@ -667,7 +469,6 @@
               <li>Inspection integration and sequencing</li>
             </ul>
           </div>
-
           <div class="card">
             <h3>Real World Learning</h3>
             <ul>
@@ -678,7 +479,6 @@
               <li>Strong owner-side perspective with practical understanding of contractor interface</li>
             </ul>
           </div>
-
           <div class="card">
             <h3>Typical Session Focus</h3>
             <ul>
@@ -694,26 +494,21 @@
         <div class="three-col" style="margin-top:22px;">
           <div class="package-card">
             <h3>Initial Assessment</h3>
-            <p>
-              Start with a short intake to understand current P6 experience, turnaround exposure, target role, and where the most useful development can begin.
-            </p>
+            <p>Start with a short intake to understand current P6 experience, turnaround exposure, target role, and where the most useful development can begin.</p>
           </div>
           <div class="package-card">
             <h3>Focused Coaching Package</h3>
-            <p>
-              Move into targeted sessions built around fundamentals, turnaround concepts, practical examples, and the way scheduling is really applied in the field.
-            </p>
+            <p>Move into targeted sessions built around fundamentals, turnaround concepts, practical examples, and the way scheduling is really applied in the field.</p>
           </div>
           <div class="package-card">
             <h3>Follow On Development</h3>
-            <p>
-              Continue into deeper schedule review, analysis techniques, real world scenarios, and more advanced guidance as progress builds.
-            </p>
+            <p>Continue into deeper schedule review, analysis techniques, real world scenarios, and more advanced guidance as progress builds.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ── WHO ── -->
     <section id="who" class="section-tight">
       <div class="container">
         <div class="eyebrow">Who This Helps</div>
@@ -721,26 +516,21 @@
         <div class="three-col" style="margin-top:28px;">
           <div class="card">
             <h3>Planners Moving Toward Scheduling</h3>
-            <p>
-              For maintenance or TA planners who are around P6 and schedules, but want to understand how to actually build, interpret, and manage them.
-            </p>
+            <p>For maintenance or TA planners who are around P6 and schedules, but want to understand how to actually build, interpret, and manage them.</p>
           </div>
           <div class="card">
             <h3>Coordinators Expanding Their Role</h3>
-            <p>
-              For professionals who already work around turnaround planning and execution and want stronger technical and practical scheduling skills.
-            </p>
+            <p>For professionals who already work around turnaround planning and execution and want stronger technical and practical scheduling skills.</p>
           </div>
           <div class="card">
             <h3>Developing Schedulers</h3>
-            <p>
-              For people who know the software basics but want owner-side insight, better judgment, and real world application that improves credibility fast.
-            </p>
+            <p>For people who know the software basics but want owner-side insight, better judgment, and real world application that improves credibility fast.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ── PATH ── -->
     <section id="path" class="section-tight">
       <div class="container">
         <div class="eyebrow">Sample Engagement Path</div>
@@ -770,12 +560,13 @@
       </div>
     </section>
 
+    <!-- ── INTAKE ── -->
     <section id="intake" class="section">
       <div class="container">
         <div class="eyebrow">Initial Assessment</div>
         <h2>Start with a focused intake so time is spent where it matters.</h2>
         <p class="lead" style="max-width:790px;">
-          For one-on-one development engagements, the process typically begins with a short assessment. This allows sessions to be tailored to the individual’s experience level, goals, and target role.
+          For one-on-one development engagements, the process typically begins with a short assessment. This allows sessions to be tailored to the individual's experience level, goals, and target role.
         </p>
 
         <div class="three-col" style="margin-top:28px;">
@@ -788,7 +579,6 @@
               <li>Target path and career direction</li>
             </ul>
           </div>
-
           <div class="card">
             <h3>P6 And Fundamentals</h3>
             <ul class="checklist">
@@ -798,7 +588,6 @@
               <li>Current strengths and known gaps</li>
             </ul>
           </div>
-
           <div class="card">
             <h3>Turnaround Focus</h3>
             <ul class="checklist">
@@ -823,12 +612,13 @@
       </div>
     </section>
 
+    <!-- ── FULL SERVICES ── -->
     <section id="services" class="section-tight">
       <div class="container">
         <div class="eyebrow">Full Services</div>
         <h2>Deeper support across scheduling, controls, assurance, and execution readiness.</h2>
         <p class="lead" style="max-width:780px;">
-          Kel Tech Controls supports refineries and industrial facilities with targeted scheduling, diagnostics, assurance reviews, and project controls support across the lifecycle of a turnaround or project.
+          Keltech Controls supports refineries and industrial facilities with targeted scheduling, diagnostics, assurance reviews, and project controls support across the lifecycle of a turnaround or project.
         </p>
 
         <div class="three-col" style="margin-top:28px;">
@@ -842,7 +632,6 @@
               <li>Schedule archiving</li>
             </ul>
           </div>
-
           <div class="card">
             <h3>Project Controls Support</h3>
             <ul>
@@ -853,7 +642,6 @@
               <li>Earned Value and Earned Schedule analysis</li>
             </ul>
           </div>
-
           <div class="card">
             <h3>Assurance And Review</h3>
             <ul>
@@ -868,6 +656,7 @@
       </div>
     </section>
 
+    <!-- ── REMOTE VALUE ── -->
     <section class="section-tight">
       <div class="container">
         <div class="eyebrow">Remote Value</div>
@@ -897,28 +686,24 @@
       </div>
     </section>
 
+    <!-- ── ABOUT ── -->
     <section class="section">
       <div class="container two-col">
         <div class="glass" style="padding:32px;">
           <div class="eyebrow">About</div>
           <h2>Owner-side refinery experience that translates into practical guidance.</h2>
-          <p class="lead">
-            Jason Kelley brings decades of turnaround and project scheduling experience with a strong focus on owner-side execution realities.
-          </p>
-          <p>
-            Good schedules are not just technically correct. They need to support how operations, maintenance, inspection, and leadership actually make decisions and execute work during an event.
-          </p>
-          <p>
-            Kel Tech Controls was built to provide that level of practical support in a flexible, accessible format, whether the need is schedule review, controls support, or targeted development of the next scheduler.
-          </p>
+          <p class="lead">Jason Kelley brings decades of turnaround and project scheduling experience with a strong focus on owner-side execution realities.</p>
+          <p>Good schedules are not just technically correct. They need to support how operations, maintenance, inspection, and leadership actually make decisions and execute work during an event.</p>
+          <p>Keltech Controls was built to provide that level of practical support in a flexible, accessible format — whether the need is schedule review, controls support, or targeted development of the next scheduler.</p>
+          <!-- Tagline as a closing line in about -->
+          <p style="color:var(--teal);font-weight:600;font-size:.97rem;margin-bottom:0;">Build it right &#x2192; Run it right</p>
         </div>
 
         <div class="glass" style="padding:32px;">
           <div class="eyebrow">Credentials</div>
-          <h3>Jason Kelley<br><span style="color:var(--muted);font-weight:400;">Principal Consultant, Kel Tech Controls</span></h3>
-
+          <h3>Jason Kelley<br><span style="color:var(--muted);font-weight:400;">Principal Consultant, Keltech Controls</span></h3>
           <div class="credentials">
-            <div class="credential">30 plus years in turnaround and project scheduling</div>
+            <div class="credential">30+ years in turnaround and project scheduling</div>
             <div class="credential">Extensive owner-side refinery experience</div>
             <div class="credential">Primavera P6 specialist</div>
             <div class="credential">Planning, execution, and schedule diagnostics support</div>
@@ -927,23 +712,23 @@
       </div>
     </section>
 
+    <!-- ── CONTACT ── -->
     <section id="contact" class="section-tight">
       <div class="container">
         <div class="glass" style="padding:30px;">
           <div class="two-col">
             <div>
-              <div class="eyebrow">Let’s Talk</div>
+              <div class="eyebrow">Let's Talk</div>
               <h2>Need a second set of eyes on a schedule or a path forward for scheduler development?</h2>
-              <p class="lead">
-                Whether you need an independent turnaround schedule review, project controls support, or one-on-one development for a planner or scheduler, Kel Tech Controls can help.
-              </p>
+              <p class="lead">Whether you need an independent turnaround schedule review, project controls support, or one-on-one development for a planner or scheduler, Keltech Controls can help.</p>
             </div>
             <div>
               <div class="btn-row" style="margin-top:0;">
-                <a class="btn btn-primary" href="mailto:jason.kelley@keltechcontrols.com?subject=Kel%20Tech%20Controls%20Inquiry">Email Jason</a>
+                <a class="btn btn-primary" href="mailto:jason.kelley@keltechcontrols.com?subject=Keltech%20Controls%20Inquiry">Email Jason</a>
                 <a class="btn btn-secondary" href="https://www.linkedin.com/in/jason-kelley-pmp-21aa15128" target="_blank" rel="noopener">LinkedIn</a>
               </div>
               <p class="small" style="margin-top:16px;">jason.kelley@keltechcontrols.com</p>
+              <p class="small" style="margin-top:4px;">keltechcontrols.com</p>
             </div>
           </div>
         </div>
@@ -951,11 +736,29 @@
     </section>
   </main>
 
+  <!-- ── FOOTER ── -->
   <footer>
     <div class="container footer-row">
-      <div class="small">© 2026 Kel Tech Controls, LLC. All rights reserved.</div>
-      <div class="small">Turnaround Scheduling | Schedule Doctor | Project Controls | One-On-One Development</div>
+      <!-- Footer brand with mini mark -->
+      <div class="footer-brand">
+        <svg viewBox="0 0 44 44" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="40" height="40" rx="11" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <line x1="11" y1="10" x2="11" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="26" y2="10" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="27" y2="34" stroke="#55A99A" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="32" y1="15" x2="32" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="22" y1="15" x2="42" y2="15" stroke="#F5B235" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <div class="footer-brand-text">
+          <strong>Keltech Controls</strong>
+          <span>Build it right &#x2192; Run it right</span>
+        </div>
+      </div>
+
+      <div class="small" style="text-align:center;">&#169; 2026 Keltech Controls, LLC. All rights reserved.</div>
+      <div class="small" style="text-align:right;">Turnaround Scheduling &#x2022; Schedule Doctor &#x2022; Project Controls &#x2022; One-On-One Development</div>
     </div>
   </footer>
+
 </body>
 </html>
