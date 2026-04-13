@@ -6,69 +6,14 @@
   <title>Keltech Controls | Turnaround Scheduling and Project Controls</title>
   <meta name="description" content="Keltech Controls provides turnaround scheduling, Primavera P6 support, Schedule Doctor remote diagnostics, execution support, retainer advisory, group training, and one-on-one scheduler development for refineries and industrial facilities." />
   <link rel="stylesheet" href="css/shared.css" />
-  <style>
-    :root{--bg:#08111f;--bg2:#0d1b2e;--panel:rgba(255,255,255,.06);--panel2:rgba(255,255,255,.04);--text:#eef4ff;--muted:#b9c7da;--line:rgba(255,255,255,.12);--blue:#5eb6ff;--blue2:#7dd3fc;--teal:#55A99A;--teal-light:#62e3d6;--gold:#F5B235;--shadow:0 20px 60px rgba(0,0,0,.35);--radius:22px;--max:1180px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top right,rgba(94,182,255,.12),transparent 30%),radial-gradient(circle at 15% 20%,rgba(85,169,154,.10),transparent 25%),linear-gradient(180deg,#08111f 0%,#091525 35%,#0c1a2d 100%);line-height:1.55}
-    a{color:inherit;text-decoration:none}
-    .container{width:min(var(--max),calc(100% - 32px));margin:0 auto}
-    .section{padding:88px 0}.section-tight{padding:64px 0}
-    .eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue2);margin-bottom:14px;font-weight:700}
-    h1,h2,h3{margin:0 0 16px}
-    h1{font-size:clamp(2.4rem,5vw,5rem);line-height:.98;letter-spacing:-.03em}
-    h2{font-size:clamp(1.9rem,3.8vw,3rem);line-height:1.04;letter-spacing:-.02em}
-    h3{font-size:1.15rem;line-height:1.2}
-    p{margin:0 0 18px;color:var(--muted);font-size:1.03rem}
-    .lead{font-size:1.12rem;color:#dbe8f8}
-    .glass{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);backdrop-filter:blur(10px);box-shadow:var(--shadow)}
-    .card{padding:26px;background:var(--panel);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);height:100%}
-    .highlight-box{padding:28px;border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:1px solid var(--line);box-shadow:var(--shadow)}
-    .tagline-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;background:rgba(85,169,154,.12);border:1px solid rgba(85,169,154,.30);color:var(--teal);font-size:.88rem;font-weight:600;letter-spacing:.03em;margin-bottom:20px}
-    .new-badge{display:inline-block;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;font-weight:700;padding:3px 9px;border-radius:999px;background:rgba(245,178,53,.15);border:1px solid rgba(245,178,53,.35);color:var(--gold);margin-left:8px;vertical-align:middle;position:relative;top:-1px}
-    .btn-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;border-radius:999px;font-weight:700;transition:.2s ease;border:1px solid transparent;font-size:1rem}
-    .btn-primary{background:linear-gradient(135deg,var(--teal),var(--teal-light));color:#07111b;box-shadow:0 12px 30px rgba(85,169,154,.30)}
-    .btn-primary:hover{transform:translateY(-1px)}
-    .btn-secondary{border-color:var(--line);background:rgba(255,255,255,.04);color:var(--text)}
-    .btn-secondary:hover{background:rgba(255,255,255,.08);transform:translateY(-1px)}
-    .nav-wrap{position:sticky;top:0;z-index:100;backdrop-filter:blur(14px);background:rgba(8,17,31,.72);border-bottom:1px solid rgba(255,255,255,.08)}
-    .nav{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .brand{display:flex;align-items:center;gap:14px;min-width:0}
-    .brand-mark{width:52px;height:52px;flex:0 0 52px}
-    .brand-text{display:flex;flex-direction:column;min-width:0}
-    .brand-text strong{font-size:1.05rem;line-height:1.1;letter-spacing:.01em}
-    .brand-text span{font-size:.78rem;color:var(--teal);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .nav-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:flex-end}
-    .nav-links a{color:var(--muted);font-size:.95rem;transition:.15s}
-    .nav-links a:hover{color:var(--text)}
-    footer{padding:28px 0 50px;border-top:1px solid rgba(255,255,255,.08)}
-    .footer-row{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-    .footer-brand{display:flex;align-items:center;gap:12px}
-    .footer-brand-text strong{display:block;font-size:.95rem;line-height:1.1}
-    .footer-brand-text span{font-size:.82rem;color:var(--teal);font-weight:600}
-    .small{font-size:.92rem;color:var(--muted)}
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
-    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
-    .stat{padding:18px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
-    .stat strong{display:block;font-size:1.7rem;line-height:1;margin-bottom:8px;color:#fff}
-    .stat span{color:var(--muted);font-size:.92rem}
-    .credentials{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
-    .credential{padding:18px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line);font-weight:600;color:#e4edf8}
-    .counter-bar{display:flex;align-items:center;justify-content:center;gap:10px;padding:10px 0 0;border-top:1px solid rgba(255,255,255,.06);margin-top:24px;width:100%}
-    .counter-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2s ease-in-out infinite;flex-shrink:0}
-    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
-    .counter-label{font-size:.8rem;color:var(--muted)}
-    .counter-num{font-size:.8rem;color:var(--teal);font-weight:700}
-    @media(max-width:980px){.two-col{grid-template-columns:1fr}}
-    @media(max-width:680px){.nav{min-height:auto;padding:14px 0;align-items:flex-start;flex-direction:column}.nav-links{justify-content:flex-start}.stats,.credentials{grid-template-columns:1fr}.section{padding:72px 0}.section-tight{padding:54px 0}}
-  </style>
 </head>
 <body>
 
+  <!-- NAV -->
   <div class="nav-wrap">
     <div class="container nav">
       <a class="brand" href="index.html">
-        <svg class="brand-mark" viewBox="0 0 76 76" fill="none" aria-hidden="true">
+        <svg class="brand-mark" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect x="4" y="4" width="68" height="68" rx="18" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
           <line x1="20" y1="18" x2="20" y2="58" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
           <line x1="20" y1="38" x2="46" y2="18" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
@@ -87,19 +32,20 @@
         <a href="training.html">Training</a>
         <a href="consulting.html">Consulting</a>
         <a href="services.html">Services</a>
-        <a href="mailto:jason.kelley@keltechcontrols.com?subject=Keltech Controls Inquiry">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </div>
 
   <main id="top">
 
-    <section style="padding:78px 0 50px;overflow:hidden">
-      <div class="container two-col">
+    <!-- HERO -->
+    <section class="hero" style="padding:78px 0 50px;overflow:hidden">
+      <div class="container" style="display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:stretch">
         <div>
           <div style="display:flex;align-items:center;gap:18px;margin-bottom:18px">
             <div style="width:84px;height:84px;flex:0 0 84px;border-radius:24px;display:grid;place-items:center;background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow)" aria-hidden="true">
-              <svg viewBox="0 0 92 92" width="68" height="68" fill="none">
+              <svg viewBox="0 0 92 92" width="68" height="68" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="5" y="5" width="82" height="82" rx="22" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
                 <line x1="24" y1="20" x2="24" y2="72" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round"/>
                 <line x1="24" y1="46" x2="56" y2="20" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round"/>
@@ -113,10 +59,15 @@
               <span style="color:var(--muted);font-size:.98rem">Independent turnaround scheduling and project controls support</span>
             </div>
           </div>
+
           <div class="tagline-pill">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#55A99A" stroke-width="1.5"/><path d="M4 7h6M8 5l2 2-2 2" stroke="#55A99A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <circle cx="7" cy="7" r="6" stroke="#55A99A" stroke-width="1.5"/>
+              <path d="M4 7h6M8 5l2 2-2 2" stroke="#55A99A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             Build it right &#x2192; Run it right
           </div>
+
           <div class="eyebrow">Independent Turnaround Support</div>
           <h1>Turnaround schedules that hold up in the field.</h1>
           <p class="lead">Keltech Controls provides turnaround scheduling, Primavera P6 support, project controls guidance, execution support, and scheduler development for refineries and industrial facilities.</p>
@@ -126,8 +77,9 @@
             <a class="btn btn-secondary" href="consulting.html">Explore One-On-One Consulting</a>
           </div>
         </div>
+
         <div class="glass" style="padding:24px;position:relative;overflow:hidden">
-          <div style="position:absolute;inset:auto -40px -40px auto;width:220px;height:220px;background:radial-gradient(circle,rgba(85,169,154,.18),transparent 62%);pointer-events:none"></div>
+          <div style="content:'';position:absolute;inset:auto -40px -40px auto;width:220px;height:220px;background:radial-gradient(circle,rgba(85,169,154,.18),transparent 62%);pointer-events:none"></div>
           <div class="eyebrow">Why Keltech</div>
           <h3>Experienced support without the overhead of full-time staffing.</h3>
           <p>Many organizations do not need a permanent scheduler year-round. Remote support gives teams access to seasoned turnaround and project controls insight when it matters most — including during live execution.</p>
@@ -141,15 +93,18 @@
       </div>
     </section>
 
+    <!-- SERVICES OVERVIEW GRID -->
     <section class="section-tight">
       <div class="container">
         <div class="eyebrow">What Keltech Offers</div>
         <h2>Support across every phase of the turnaround lifecycle.</h2>
         <p class="lead" style="max-width:720px">From pre-TA schedule development through live execution — flexible, experienced support without the overhead of full-time staffing.</p>
+
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:32px">
 
-          <a href="schedule-doctor.html" style="display:block">
-            <div class="card" style="border-color:rgba(94,182,255,.22);transition:.2s ease" onmouseover="this.style.borderColor='rgba(94,182,255,.5)'" onmouseout="this.style.borderColor='rgba(94,182,255,.22)'">
+          <!-- Schedule Doctor -->
+          <a href="schedule-doctor.html" style="display:block;text-decoration:none">
+            <div class="card" style="border-color:rgba(94,182,255,.22);transition:.2s ease;cursor:pointer" onmouseover="this.style.borderColor='rgba(94,182,255,.5)'" onmouseout="this.style.borderColor='rgba(94,182,255,.22)'">
               <div style="width:40px;height:40px;border-radius:12px;background:rgba(94,182,255,.12);border:1px solid rgba(94,182,255,.25);display:grid;place-items:center;margin-bottom:14px">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="10" height="8" rx="2" stroke="#7DD3FC" stroke-width="1.5"/><line x1="5" y1="12" x2="11" y2="12" stroke="#7DD3FC" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="12" x2="7" y2="14" stroke="#7DD3FC" stroke-width="1.5" stroke-linecap="round"/><line x1="5" y1="6" x2="11" y2="6" stroke="rgba(255,255,255,.2)" stroke-width="1"/><line x1="5" y1="8" x2="11" y2="8" stroke="rgba(255,255,255,.2)" stroke-width="1"/><circle cx="15" cy="5" r="3" stroke="#F5B235" stroke-width="1.5"/></svg>
               </div>
@@ -159,8 +114,9 @@
             </div>
           </a>
 
-          <a href="execution-support.html" style="display:block">
-            <div class="card" style="border-color:rgba(85,169,154,.22);transition:.2s ease" onmouseover="this.style.borderColor='rgba(85,169,154,.5)'" onmouseout="this.style.borderColor='rgba(85,169,154,.22)'">
+          <!-- Execution Support -->
+          <a href="execution-support.html" style="display:block;text-decoration:none">
+            <div class="card" style="border-color:rgba(85,169,154,.22);transition:.2s ease;cursor:pointer" onmouseover="this.style.borderColor='rgba(85,169,154,.5)'" onmouseout="this.style.borderColor='rgba(85,169,154,.22)'">
               <div style="width:40px;height:40px;border-radius:12px;background:rgba(85,169,154,.12);border:1px solid rgba(85,169,154,.25);display:grid;place-items:center;margin-bottom:14px">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#55A99A" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="#55A99A" stroke-width="1.5" stroke-linecap="round"/></svg>
               </div>
@@ -170,8 +126,9 @@
             </div>
           </a>
 
-          <a href="execution-support.html#retainer" style="display:block">
-            <div class="card" style="border-color:rgba(245,178,53,.22);transition:.2s ease" onmouseover="this.style.borderColor='rgba(245,178,53,.5)'" onmouseout="this.style.borderColor='rgba(245,178,53,.22)'">
+          <!-- Retainer -->
+          <a href="execution-support.html#retainer" style="display:block;text-decoration:none">
+            <div class="card" style="border-color:rgba(245,178,53,.22);transition:.2s ease;cursor:pointer" onmouseover="this.style.borderColor='rgba(245,178,53,.5)'" onmouseout="this.style.borderColor='rgba(245,178,53,.22)'">
               <div style="width:40px;height:40px;border-radius:12px;background:rgba(245,178,53,.12);border:1px solid rgba(245,178,53,.25);display:grid;place-items:center;margin-bottom:14px">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="7" width="14" height="10" rx="2" stroke="#F5B235" stroke-width="1.5"/><path d="M7 7V5a3 3 0 016 0v2" stroke="#F5B235" stroke-width="1.5" stroke-linecap="round"/></svg>
               </div>
@@ -181,8 +138,9 @@
             </div>
           </a>
 
-          <a href="training.html" style="display:block">
-            <div class="card" style="border-color:rgba(85,169,154,.22);transition:.2s ease" onmouseover="this.style.borderColor='rgba(85,169,154,.5)'" onmouseout="this.style.borderColor='rgba(85,169,154,.22)'">
+          <!-- Group Training -->
+          <a href="training.html" style="display:block;text-decoration:none">
+            <div class="card" style="border-color:rgba(85,169,154,.22);transition:.2s ease;cursor:pointer" onmouseover="this.style.borderColor='rgba(85,169,154,.5)'" onmouseout="this.style.borderColor='rgba(85,169,154,.22)'">
               <div style="width:40px;height:40px;border-radius:12px;background:rgba(85,169,154,.12);border:1px solid rgba(85,169,154,.25);display:grid;place-items:center;margin-bottom:14px">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="7" cy="7" r="3" stroke="#55A99A" stroke-width="1.5"/><circle cx="14" cy="7" r="2" stroke="#55A99A" stroke-width="1.3"/><path d="M2 16c0-3 2-5 5-5s5 2 5 5" stroke="#55A99A" stroke-width="1.5" stroke-linecap="round"/><path d="M14 10c2 0 4 1.5 4 4" stroke="#55A99A" stroke-width="1.3" stroke-linecap="round"/></svg>
               </div>
@@ -192,8 +150,9 @@
             </div>
           </a>
 
-          <a href="consulting.html" style="display:block">
-            <div class="card" style="border-color:rgba(94,182,255,.22);transition:.2s ease" onmouseover="this.style.borderColor='rgba(94,182,255,.5)'" onmouseout="this.style.borderColor='rgba(94,182,255,.22)'">
+          <!-- One-on-One -->
+          <a href="consulting.html" style="display:block;text-decoration:none">
+            <div class="card" style="border-color:rgba(94,182,255,.22);transition:.2s ease;cursor:pointer" onmouseover="this.style.borderColor='rgba(94,182,255,.5)'" onmouseout="this.style.borderColor='rgba(94,182,255,.22)'">
               <div style="width:40px;height:40px;border-radius:12px;background:rgba(94,182,255,.12);border:1px solid rgba(94,182,255,.25);display:grid;place-items:center;margin-bottom:14px">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="7" r="3.5" stroke="#7DD3FC" stroke-width="1.5"/><path d="M4 17c0-3.5 2.7-6 6-6s6 2.5 6 6" stroke="#7DD3FC" stroke-width="1.5" stroke-linecap="round"/></svg>
               </div>
@@ -203,8 +162,9 @@
             </div>
           </a>
 
-          <a href="services.html" style="display:block">
-            <div class="card" style="border-color:rgba(255,255,255,.10);transition:.2s ease" onmouseover="this.style.borderColor='rgba(255,255,255,.25)'" onmouseout="this.style.borderColor='rgba(255,255,255,.10)'">
+          <!-- Full Services -->
+          <a href="services.html" style="display:block;text-decoration:none">
+            <div class="card" style="border-color:rgba(255,255,255,.10);transition:.2s ease;cursor:pointer" onmouseover="this.style.borderColor='rgba(255,255,255,.25)'" onmouseout="this.style.borderColor='rgba(255,255,255,.10)'">
               <div style="width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);display:grid;place-items:center;margin-bottom:14px">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="6" height="6" rx="1.5" stroke="#b9c7da" stroke-width="1.5"/><rect x="11" y="3" width="6" height="6" rx="1.5" stroke="#b9c7da" stroke-width="1.5"/><rect x="3" y="11" width="6" height="6" rx="1.5" stroke="#b9c7da" stroke-width="1.5"/><rect x="11" y="11" width="6" height="6" rx="1.5" stroke="#b9c7da" stroke-width="1.5"/></svg>
               </div>
@@ -218,6 +178,7 @@
       </div>
     </section>
 
+    <!-- ABOUT SNIPPET -->
     <section class="section">
       <div class="container two-col">
         <div class="glass" style="padding:32px">
@@ -228,6 +189,7 @@
           <p>Keltech Controls was built to provide that level of practical support in a flexible, accessible format — whether the need is schedule review, controls support, execution stand-by, or targeted development of the next scheduler.</p>
           <p style="color:var(--teal);font-weight:600;font-size:.97rem;margin-bottom:0">Build it right &#x2192; Run it right</p>
         </div>
+
         <div class="glass" style="padding:32px">
           <div class="eyebrow">Credentials</div>
           <h3>Jason Kelley<br><span style="color:var(--muted);font-weight:400">Principal Consultant, Keltech Controls</span></h3>
@@ -245,6 +207,7 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="section-tight">
       <div class="container">
         <div class="glass" style="padding:30px">
@@ -256,7 +219,7 @@
             </div>
             <div>
               <div class="btn-row" style="margin-top:0">
-                <a class="btn btn-primary" href="mailto:jason.kelley@keltechcontrols.com?subject=Keltech%20Controls%20Inquiry">Email Jason</a>
+                <a class="btn btn-primary" href="contact.html">Get In Touch</a>
                 <a class="btn btn-secondary" href="https://www.linkedin.com/in/jason-kelley-pmp-21aa15128" target="_blank" rel="noopener">LinkedIn</a>
               </div>
               <p class="small" style="margin-top:16px">jason.kelley@keltechcontrols.com</p>
@@ -269,47 +232,32 @@
 
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="container">
-      <div class="footer-row">
-        <div class="footer-brand">
-          <svg viewBox="0 0 44 44" width="36" height="36" fill="none" aria-hidden="true">
-            <rect x="2" y="2" width="40" height="40" rx="11" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-            <line x1="11" y1="10" x2="11" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
-            <line x1="11" y1="22" x2="26" y2="10" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
-            <line x1="11" y1="22" x2="27" y2="34" stroke="#55A99A" stroke-width="3.5" stroke-linecap="round"/>
-            <line x1="32" y1="15" x2="32" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
-            <line x1="22" y1="15" x2="42" y2="15" stroke="#F5B235" stroke-width="3.5" stroke-linecap="round"/>
-          </svg>
-          <div class="footer-brand-text">
-            <strong>Keltech Controls</strong>
-            <span>Build it right &#x2192; Run it right</span>
-          </div>
-        </div>
-        <div class="small" style="text-align:right">
-          <a href="schedule-doctor.html" style="color:var(--muted)">Schedule Doctor</a> &#x2022;
-          <a href="execution-support.html" style="color:var(--muted)">Execution Support</a> &#x2022;
-          <a href="training.html" style="color:var(--muted)">Training</a> &#x2022;
-          <a href="consulting.html" style="color:var(--muted)">Consulting</a>
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <svg viewBox="0 0 44 44" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="40" height="40" rx="11" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <line x1="11" y1="10" x2="11" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="26" y2="10" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="27" y2="34" stroke="#55A99A" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="32" y1="15" x2="32" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="22" y1="15" x2="42" y2="15" stroke="#F5B235" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <div class="footer-brand-text">
+          <strong>Keltech Controls</strong>
+          <span>Build it right &#x2192; Run it right</span>
         </div>
       </div>
-      <div class="counter-bar">
-        <div class="counter-dot"></div>
-        <span class="counter-label">Total site visits:</span>
-        <span class="counter-num" id="visit-count">—</span>
-      </div>
-      <div style="text-align:center;margin-top:16px">
-        <span class="small">&#169; 2026 Keltech Controls, LLC. All rights reserved.</span>
+      <div class="small" style="text-align:center">&#169; 2026 Keltech Controls, LLC. All rights reserved.</div>
+      <div class="small" style="text-align:right">
+        <a href="schedule-doctor.html" style="color:var(--muted)">Schedule Doctor</a> &#x2022;
+        <a href="execution-support.html" style="color:var(--muted)">Execution Support</a> &#x2022;
+        <a href="training.html" style="color:var(--muted)">Training</a> &#x2022;
+        <a href="consulting.html" style="color:var(--muted)">Consulting</a>
       </div>
     </div>
   </footer>
-
-  <script>
-    fetch('https://api.countapi.xyz/hit/keltechcontrols.com/pageviews')
-      .then(r => r.json())
-      .then(d => { if (d && d.value) document.getElementById('visit-count').textContent = d.value.toLocaleString(); })
-      .catch(() => {});
-  </script>
 
 </body>
 </html>
