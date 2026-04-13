@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule Doctor | Keltech Controls</title>
+  <meta name="description" content="Schedule Doctor by Keltech Controls — remote Primavera P6 turnaround schedule diagnostics. Expert review without waiting on a site visit." />
+  <link rel="stylesheet" href="css/shared.css" />
+</head>
+<body>
+
+  <div class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 76 76" fill="none" aria-hidden="true">
+          <rect x="4" y="4" width="68" height="68" rx="18" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+          <line x1="20" y1="18" x2="20" y2="58" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="20" y1="38" x2="46" y2="18" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="20" y1="38" x2="47" y2="58" stroke="#55A99A" stroke-width="6" stroke-linecap="round"/>
+          <line x1="54" y1="27" x2="54" y2="58" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="38" y1="27" x2="70" y2="27" stroke="#F5B235" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text">
+          <strong>Keltech Controls</strong>
+          <span>Build it right &#x2192; Run it right</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="schedule-doctor.html" class="active">Schedule Doctor</a>
+        <a href="execution-support.html">Execution Support</a>
+        <a href="training.html">Training</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="services.html">Services</a>
+        <a href="mailto:jason.kelley@keltechcontrols.com?subject=Keltech Controls Inquiry">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section">
+      <div class="container two-col">
+        <div class="glass" style="padding:32px">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
+            <div class="doctor-logo" aria-hidden="true">
+              <svg viewBox="0 0 96 96" width="64" height="64" fill="none">
+                <defs>
+                  <linearGradient id="sdg" x1="18" y1="14" x2="78" y2="82" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#7DD3FC"/><stop offset="1" stop-color="#55A99A"/>
+                  </linearGradient>
+                </defs>
+                <rect x="14" y="20" width="46" height="34" rx="8" stroke="url(#sdg)" stroke-width="4"/>
+                <path d="M24 64H50" stroke="url(#sdg)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M31 54V64" stroke="url(#sdg)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M43 54V64" stroke="url(#sdg)" stroke-width="4" stroke-linecap="round"/>
+                <line x1="20" y1="30" x2="54" y2="30" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+                <line x1="20" y1="38" x2="54" y2="38" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+                <line x1="20" y1="46" x2="54" y2="46" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+                <rect x="22" y="26.5" width="14" height="6" rx="3" fill="#F5B235"/>
+                <rect x="32" y="34.5" width="16" height="6" rx="3" fill="#7DD3FC"/>
+                <rect x="27" y="42.5" width="22" height="6" rx="3" fill="#55A99A"/>
+                <path d="M66 22C66 16.477 70.477 12 76 12C81.523 12 86 16.477 86 22C86 26.91 82.46 31.005 77.8 31.87V44C77.8 50.075 72.875 55 66.8 55H58" stroke="url(#sdg)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="76" cy="22" r="5.5" fill="none" stroke="#F5B235" stroke-width="3"/>
+              </svg>
+            </div>
+            <div>
+              <strong style="display:block;font-size:1.4rem;margin-bottom:4px">Schedule Doctor</strong>
+              <span style="color:var(--muted);font-size:.95rem">Remote turnaround schedule diagnostics</span>
+            </div>
+          </div>
+          <div class="eyebrow">A Virtual House Call For Your P6 Schedule</div>
+          <h1 style="font-size:clamp(1.8rem,4vw,3rem)">Expert review without waiting on a site visit.</h1>
+          <p class="lead">Many turnaround schedules look solid at a glance but contain logic breaks, hidden float risk, manpower loading issues, or inspection integration gaps that do not show up until execution is underway.</p>
+          <p>Schedule Doctor makes remote support feel like an advantage, not a compromise. Teams can send a Primavera P6 export, review findings by screen share, and receive practical recommendations quickly — often before travel for a site visit would even be arranged.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="mailto:jason.kelley@keltechcontrols.com?subject=Schedule%20Doctor%20Review">Ask About Schedule Doctor</a>
+            <a class="btn btn-secondary" href="https://forms.gle/xGJ5X5MMnMQoocQR9" target="_blank" rel="noopener">Begin Intake</a>
+          </div>
+        </div>
+
+        <div class="glass" style="padding:32px">
+          <div class="eyebrow">What A Review Can Uncover</div>
+          <h3>Fast diagnostics with practical next steps.</h3>
+          <div class="pill-grid">
+            <div class="pill">Logic integrity and open ends</div>
+            <div class="pill">Critical path and float path issues</div>
+            <div class="pill">Shutdown and startup sequencing</div>
+            <div class="pill">Craft loading imbalance</div>
+            <div class="pill">Inspection integration gaps</div>
+            <div class="pill">Schedule quality concerns</div>
+          </div>
+          <div style="margin-top:22px">
+            <p><strong style="color:#fff">Remote value:</strong> lower overhead, faster feedback, easier access to experienced review, and recommendations your team can act on immediately.</p>
+          </div>
+          <div class="highlight-box" style="margin-top:20px;padding:22px">
+            <h3 style="margin-bottom:10px">How It Works</h3>
+            <ul class="checklist">
+              <li>Send a Primavera P6 export</li>
+              <li>Review findings together by screen share</li>
+              <li>Receive documented recommendations</li>
+              <li>Act on results immediately — no travel wait</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REMOTE VALUE -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="eyebrow">Remote Value</div>
+        <h2>Why remote schedule review works.</h2>
+        <div class="four-col" style="margin-top:26px">
+          <div class="step"><div class="step-number">1</div><h3>Fast access</h3><p>Review can begin as soon as the schedule export is received, without waiting on travel.</p></div>
+          <div class="step"><div class="step-number">2</div><h3>Focused review</h3><p>Screen-share sessions keep discussions efficient and centered on the actual schedule issues.</p></div>
+          <div class="step"><div class="step-number">3</div><h3>Lower overhead</h3><p>Teams get experienced support without the added cost and delay of arranging a site visit first.</p></div>
+          <div class="step"><div class="step-number">4</div><h3>Clear action items</h3><p>Recommendations can be documented and shared quickly so the team can respond immediately.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTAKE -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="highlight-box">
+          <div class="two-col">
+            <div>
+              <div class="eyebrow">Get Started</div>
+              <h2>Start with a focused intake.</h2>
+              <p>The intake helps identify current Primavera P6 knowledge, turnaround exposure, and the most useful starting point — so the first session is productive from the start.</p>
+            </div>
+            <div style="display:flex;flex-direction:column;justify-content:center;gap:14px">
+              <a class="btn btn-primary" href="https://forms.gle/xGJ5X5MMnMQoocQR9" target="_blank" rel="noopener">Begin Schedule Doctor Intake</a>
+              <a class="btn btn-secondary" href="mailto:jason.kelley@keltechcontrols.com?subject=Schedule%20Doctor%20Questions">Ask A Question First</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <svg viewBox="0 0 44 44" width="36" height="36" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="40" height="40" rx="11" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <line x1="11" y1="10" x2="11" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="26" y2="10" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="27" y2="34" stroke="#55A99A" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="32" y1="15" x2="32" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="22" y1="15" x2="42" y2="15" stroke="#F5B235" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <div class="footer-brand-text">
+          <strong>Keltech Controls</strong>
+          <span>Build it right &#x2192; Run it right</span>
+        </div>
+      </div>
+      <div class="small" style="text-align:center">&#169; 2026 Keltech Controls, LLC. All rights reserved.</div>
+      <div class="small" style="text-align:right">
+        <a href="index.html" style="color:var(--muted)">Home</a> &#x2022;
+        <a href="execution-support.html" style="color:var(--muted)">Execution Support</a> &#x2022;
+        <a href="training.html" style="color:var(--muted)">Training</a> &#x2022;
+        <a href="consulting.html" style="color:var(--muted)">Consulting</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
