@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Keltech Controls</title>
+  <meta name="description" content="Get in touch with Keltech Controls — turnaround scheduling, execution support, retainer advisory, group training, and one-on-one scheduler development." />
+  <link rel="stylesheet" href="css/shared.css" />
+  <style>
+    .form-group{margin-bottom:20px}
+    .form-group label{display:block;font-size:.85rem;font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+      width:100%;
+      padding:14px 16px;
+      background:rgba(255,255,255,.05);
+      border:1px solid var(--line);
+      border-radius:12px;
+      color:var(--text);
+      font-family:inherit;
+      font-size:1rem;
+      transition:border-color .2s;
+      appearance:none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus{
+      outline:none;
+      border-color:var(--teal);
+    }
+    .form-group select{
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%23b9c7da' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat:no-repeat;
+      background-position:right 16px center;
+      padding-right:40px;
+      cursor:pointer;
+    }
+    .form-group select option{background:#0d1b2e;color:var(--text)}
+    .form-group textarea{resize:vertical;min-height:140px;line-height:1.6}
+    .form-group input::placeholder,
+    .form-group textarea::placeholder{color:rgba(185,199,218,.4)}
+    .submit-btn{
+      width:100%;
+      padding:16px;
+      background:linear-gradient(135deg,var(--teal),var(--teal-light));
+      color:#07111b;
+      font-weight:700;
+      font-size:1rem;
+      border:none;
+      border-radius:999px;
+      cursor:pointer;
+      transition:.2s ease;
+      box-shadow:0 12px 30px rgba(85,169,154,.30);
+    }
+    .submit-btn:hover{transform:translateY(-1px);box-shadow:0 16px 40px rgba(85,169,154,.40)}
+    .submit-btn:active{transform:translateY(0)}
+    .submit-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+    .success-msg{
+      display:none;
+      padding:24px;
+      border-radius:16px;
+      background:rgba(85,169,154,.12);
+      border:1px solid rgba(85,169,154,.35);
+      text-align:center;
+      margin-top:20px;
+    }
+    .success-msg h3{color:var(--teal);margin-bottom:8px}
+    .success-msg p{margin:0;color:var(--muted);font-size:.95rem}
+    .form-note{font-size:.82rem;color:var(--muted);text-align:center;margin-top:14px;opacity:.7}
+  </style>
+</head>
+<body>
+
+  <div class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 76 76" fill="none" aria-hidden="true">
+          <rect x="4" y="4" width="68" height="68" rx="18" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+          <line x1="20" y1="18" x2="20" y2="58" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="20" y1="38" x2="46" y2="18" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="20" y1="38" x2="47" y2="58" stroke="#55A99A" stroke-width="6" stroke-linecap="round"/>
+          <line x1="54" y1="27" x2="54" y2="58" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="38" y1="27" x2="70" y2="27" stroke="#F5B235" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text">
+          <strong>Keltech Controls</strong>
+          <span>Build it right &#x2192; Run it right</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="schedule-doctor.html">Schedule Doctor</a>
+        <a href="execution-support.html">Execution Support</a>
+        <a href="training.html">Training</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="two-col" style="align-items:start;gap:48px">
+
+          <!-- LEFT: context -->
+          <div>
+            <div class="eyebrow">Get In Touch</div>
+            <h1 style="font-size:clamp(1.8rem,4vw,3rem)">Let's talk about what you're working on.</h1>
+            <p class="lead">Whether you need a schedule review, execution support during a live event, a retainer arrangement, group training, or one-on-one development — reach out and describe the situation.</p>
+            <p>Most engagements start with a short conversation. There's no obligation and no sales process — just a direct discussion about whether Keltech Controls is the right fit.</p>
+
+            <div style="margin-top:32px;display:flex;flex-direction:column;gap:16px">
+
+              <div style="display:flex;align-items:center;gap:14px;padding:18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line)">
+                <div style="width:36px;height:36px;border-radius:10px;background:rgba(85,169,154,.12);border:1px solid rgba(85,169,154,.25);display:grid;place-items:center;flex-shrink:0">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4l6 5 6-5" stroke="#55A99A" stroke-width="1.5" stroke-linecap="round"/><rect x="1" y="3" width="14" height="10" rx="2" stroke="#55A99A" stroke-width="1.5"/></svg>
+                </div>
+                <div>
+                  <div style="font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px">Response time</div>
+                  <div style="font-size:.95rem;font-weight:600;color:var(--text)">Typically within one business day</div>
+                </div>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:14px;padding:18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line)">
+                <div style="width:36px;height:36px;border-radius:10px;background:rgba(94,182,255,.12);border:1px solid rgba(94,182,255,.25);display:grid;place-items:center;flex-shrink:0">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#7DD3FC" stroke-width="1.5"/><path d="M8 5v3l2 2" stroke="#7DD3FC" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </div>
+                <div>
+                  <div style="font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px">Availability</div>
+                  <div style="font-size:.95rem;font-weight:600;color:var(--text)">Remote support, flexible scheduling</div>
+                </div>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:14px;padding:18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line)">
+                <div style="width:36px;height:36px;border-radius:10px;background:rgba(245,178,53,.12);border:1px solid rgba(245,178,53,.25);display:grid;place-items:center;flex-shrink:0">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.8 2 4 3.8 4 6c0 3 4 8 4 8s4-5 4-8c0-2.2-1.8-4-4-4z" stroke="#F5B235" stroke-width="1.5"/><circle cx="8" cy="6" r="1.5" stroke="#F5B235" stroke-width="1.5"/></svg>
+                </div>
+                <div>
+                  <div style="font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px">Location</div>
+                  <div style="font-size:.95rem;font-weight:600;color:var(--text)">Remote — serving refineries nationwide</div>
+                </div>
+              </div>
+
+              <a href="https://www.linkedin.com/in/jason-kelley-pmp-21aa15128" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:14px;padding:18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line);text-decoration:none;transition:.15s" onmouseover="this.style.borderColor='rgba(255,255,255,.25)'" onmouseout="this.style.borderColor='var(--line)'">
+                <div style="width:36px;height:36px;border-radius:10px;background:rgba(94,182,255,.12);border:1px solid rgba(94,182,255,.25);display:grid;place-items:center;flex-shrink:0">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="14" height="14" rx="3" stroke="#7DD3FC" stroke-width="1.5"/><path d="M4 6v6M4 4v.5" stroke="#7DD3FC" stroke-width="1.5" stroke-linecap="round"/><path d="M7 12V9c0-1.5 1-2 2-2s2 .5 2 2v3" stroke="#7DD3FC" stroke-width="1.5" stroke-linecap="round"/><path d="M7 6v1.5" stroke="#7DD3FC" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </div>
+                <div>
+                  <div style="font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px">LinkedIn</div>
+                  <div style="font-size:.95rem;font-weight:600;color:var(--blue2)">Jason Kelley, PMP &#x2192;</div>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- RIGHT: form -->
+          <div class="glass" style="padding:32px">
+            <!-- IMPORTANT: Replace YOUR_FORM_ID below with your actual Formspree form ID -->
+            <form id="contact-form" action="https://formspree.io/f/mvzdoqzd" method="POST">
+
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Jason Kelley" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@company.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="company">Company / Facility</label>
+                <input type="text" id="company" name="company" placeholder="Refinery or organization name" />
+              </div>
+
+              <div class="form-group">
+                <label for="service">What can Keltech help with?</label>
+                <select id="service" name="service">
+                  <option value="" disabled selected>Select a service area</option>
+                  <option value="Schedule Doctor">Schedule Doctor — remote P6 review</option>
+                  <option value="Execution Support">Execution Support — live event help</option>
+                  <option value="Retainer">Retainer &amp; Ongoing Advisory</option>
+                  <option value="Group Training">Group Training &amp; Workshops</option>
+                  <option value="One-on-One Consulting">One-on-One Consulting</option>
+                  <option value="Turnaround Scheduling">Turnaround Scheduling</option>
+                  <option value="Project Controls">Project Controls</option>
+                  <option value="Not Sure">Not sure yet — want to discuss</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Tell me about your situation</label>
+                <textarea id="message" name="message" placeholder="Describe what you're working on, where you're at in the TA cycle, and what kind of support would be most useful..." required></textarea>
+              </div>
+
+              <!-- Honeypot — catches spam bots, invisible to real users -->
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+              <button type="submit" class="submit-btn" id="submit-btn">Send Message</button>
+              <p class="form-note">No spam. Your contact details stay private.</p>
+            </form>
+
+            <div class="success-msg" id="success-msg">
+              <h3>Message received.</h3>
+              <p>Thanks for reaching out. Jason will be in touch within one business day.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <svg viewBox="0 0 44 44" width="36" height="36" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="40" height="40" rx="11" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <line x1="11" y1="10" x2="11" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="26" y2="10" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="27" y2="34" stroke="#55A99A" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="32" y1="15" x2="32" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="22" y1="15" x2="42" y2="15" stroke="#F5B235" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <div class="footer-brand-text">
+          <strong>Keltech Controls</strong>
+          <span>Build it right &#x2192; Run it right</span>
+        </div>
+      </div>
+      <div class="small" style="text-align:center">&#169; 2026 Keltech Controls, LLC. All rights reserved.</div>
+      <div class="small" style="text-align:right">
+        <a href="index.html" style="color:var(--muted)">Home</a> &#x2022;
+        <a href="schedule-doctor.html" style="color:var(--muted)">Schedule Doctor</a> &#x2022;
+        <a href="execution-support.html" style="color:var(--muted)">Execution Support</a> &#x2022;
+        <a href="consulting.html" style="color:var(--muted)">Consulting</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const btn = document.getElementById('submit-btn');
+    const success = document.getElementById('success-msg');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+          alert('Something went wrong. Please try again or email jason.kelley@keltechcontrols.com directly.');
+        }
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+        alert('Something went wrong. Please try again or email jason.kelley@keltechcontrols.com directly.');
+      }
+    });
+  </script>
+
+</body>
+</html>
