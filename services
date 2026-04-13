@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Services | Keltech Controls</title>
+  <meta name="description" content="Full services list for Keltech Controls — turnaround scheduling, project controls, assurance and readiness reviews, and P6 support for refineries and industrial facilities." />
+  <link rel="stylesheet" href="css/shared.css" />
+</head>
+<body>
+
+  <div class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 76 76" fill="none" aria-hidden="true">
+          <rect x="4" y="4" width="68" height="68" rx="18" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+          <line x1="20" y1="18" x2="20" y2="58" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="20" y1="38" x2="46" y2="18" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="20" y1="38" x2="47" y2="58" stroke="#55A99A" stroke-width="6" stroke-linecap="round"/>
+          <line x1="54" y1="27" x2="54" y2="58" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="38" y1="27" x2="70" y2="27" stroke="#F5B235" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text">
+          <strong>Keltech Controls</strong>
+          <span>Build it right &#x2192; Run it right</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="schedule-doctor.html">Schedule Doctor</a>
+        <a href="execution-support.html">Execution Support</a>
+        <a href="training.html">Training</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="mailto:jason.kelley@keltechcontrols.com?subject=Keltech Controls Inquiry">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">Full Services</div>
+        <h1 style="font-size:clamp(1.8rem,4vw,3.2rem);max-width:760px">Deeper support across scheduling, controls, assurance, and execution readiness.</h1>
+        <p class="lead" style="max-width:720px">Keltech Controls supports refineries and industrial facilities with targeted scheduling, diagnostics, assurance reviews, and project controls support across the lifecycle of a turnaround or project.</p>
+
+        <div class="three-col" style="margin-top:40px">
+          <div class="card">
+            <h3>Turnaround Scheduling</h3>
+            <ul>
+              <li>Primavera P6 schedule development</li>
+              <li>Shutdown and startup sequencing</li>
+              <li>Schedule recovery and compression planning</li>
+              <li>Schedule updates and execution support</li>
+              <li>Schedule archiving</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Project Controls Support</h3>
+            <ul>
+              <li>P6 database and dictionary setup</li>
+              <li>Estimate development and validation</li>
+              <li>Estimate mechanics checks</li>
+              <li>Reporting and dashboard development</li>
+              <li>Earned Value and Earned Schedule analysis</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Assurance And Review</h3>
+            <ul>
+              <li>Schedule mechanics checks</li>
+              <li>Critical path reviews</li>
+              <li>Schedule assurance and quality checks</li>
+              <li>Manpower density studies</li>
+              <li>Readiness reviews</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIALIZED OFFERINGS -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="eyebrow">Specialized Offerings</div>
+        <h2>Additional support across diagnostics, development, and advisory.</h2>
+        <div class="three-col" style="margin-top:28px">
+          <a href="schedule-doctor.html" style="display:block;text-decoration:none">
+            <div class="package-card" style="cursor:pointer">
+              <h3>Schedule Doctor</h3>
+              <p>Remote P6 schedule diagnostics. Logic checks, float analysis, sequencing review, and practical recommendations delivered by screen share — fast.</p>
+              <div style="margin-top:14px;font-size:.85rem;color:var(--teal);font-weight:600">Learn more &#x2192;</div>
+            </div>
+          </a>
+          <a href="execution-support.html" style="display:block;text-decoration:none">
+            <div class="package-card" style="cursor:pointer">
+              <h3>Execution Support &amp; Retainer</h3>
+              <p>Live event stand-by, emergency schedule recovery, daily updates, on-call advisory, and monthly hours arrangements for ongoing access.</p>
+              <div style="margin-top:14px;font-size:.85rem;color:var(--teal);font-weight:600">Learn more &#x2192;</div>
+            </div>
+          </a>
+          <a href="consulting.html" style="display:block;text-decoration:none">
+            <div class="package-card" style="cursor:pointer">
+              <h3>One-On-One Development</h3>
+              <p>Practical P6 and turnaround coaching for planners, coordinators, and developing schedulers who want real-world capability, not filler training.</p>
+              <div style="margin-top:14px;font-size:.85rem;color:var(--teal);font-weight:600">Learn more &#x2192;</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="glass" style="padding:30px">
+          <div class="two-col">
+            <div>
+              <div class="eyebrow">Let's Talk</div>
+              <h2>Not sure which service fits?</h2>
+              <p class="lead">Reach out and describe what you're working on. Most engagements start with a short conversation about the schedule, the team, and where the most useful support can begin.</p>
+            </div>
+            <div style="display:flex;flex-direction:column;justify-content:center;gap:14px">
+              <a class="btn btn-primary" href="mailto:jason.kelley@keltechcontrols.com?subject=Services%20Inquiry">Email Jason</a>
+              <a class="btn btn-secondary" href="https://www.linkedin.com/in/jason-kelley-pmp-21aa15128" target="_blank" rel="noopener">Connect on LinkedIn</a>
+              <p class="small" style="margin:4px 0 0">jason.kelley@keltechcontrols.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <svg viewBox="0 0 44 44" width="36" height="36" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="40" height="40" rx="11" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <line x1="11" y1="10" x2="11" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="26" y2="10" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="27" y2="34" stroke="#55A99A" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="32" y1="15" x2="32" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="22" y1="15" x2="42" y2="15" stroke="#F5B235" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <div class="footer-brand-text">
+          <strong>Keltech Controls</strong>
+          <span>Build it right &#x2192; Run it right</span>
+        </div>
+      </div>
+      <div class="small" style="text-align:center">&#169; 2026 Keltech Controls, LLC. All rights reserved.</div>
+      <div class="small" style="text-align:right">
+        <a href="index.html" style="color:var(--muted)">Home</a> &#x2022;
+        <a href="schedule-doctor.html" style="color:var(--muted)">Schedule Doctor</a> &#x2022;
+        <a href="execution-support.html" style="color:var(--muted)">Execution Support</a> &#x2022;
+        <a href="consulting.html" style="color:var(--muted)">Consulting</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
