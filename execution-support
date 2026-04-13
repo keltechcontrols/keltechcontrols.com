@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Execution Support &amp; Retainer | Keltech Controls</title>
+  <meta name="description" content="Keltech Controls provides remote execution support during live turnaround events — emergency schedule recovery, critical path triage, daily updates, and stand-by retainer arrangements." />
+  <link rel="stylesheet" href="css/shared.css" />
+</head>
+<body>
+
+  <div class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 76 76" fill="none" aria-hidden="true">
+          <rect x="4" y="4" width="68" height="68" rx="18" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+          <line x1="20" y1="18" x2="20" y2="58" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="20" y1="38" x2="46" y2="18" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="20" y1="38" x2="47" y2="58" stroke="#55A99A" stroke-width="6" stroke-linecap="round"/>
+          <line x1="54" y1="27" x2="54" y2="58" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="38" y1="27" x2="70" y2="27" stroke="#F5B235" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text">
+          <strong>Keltech Controls</strong>
+          <span>Build it right &#x2192; Run it right</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="schedule-doctor.html">Schedule Doctor</a>
+        <a href="execution-support.html" class="active">Execution Support</a>
+        <a href="training.html">Training</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="services.html">Services</a>
+        <a href="mailto:jason.kelley@keltechcontrols.com?subject=Keltech Controls Inquiry">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">Mid-Execution Support</div>
+        <h1 style="font-size:clamp(1.8rem,4vw,3.2rem);max-width:760px">Need a hand during the event itself?</h1>
+        <p class="lead" style="max-width:720px">Turnarounds don't always go to plan. When scope changes, sequencing breaks down, or the critical path needs a fast reset — Keltech Controls can step in remotely and get to work immediately, no site visit required.</p>
+
+        <div class="exec-panel" style="margin-top:36px">
+          <div class="eyebrow" style="color:var(--teal)">Live Event Support</div>
+          <h2 style="font-size:1.6rem;margin-bottom:10px">Remote stand-by. Real-time schedule response.</h2>
+          <p style="max-width:640px">As soon as a schedule export is shared, review and re-sequencing can begin. Sessions run by screen share so your team stays in the loop and can act on findings right away — often within hours of reaching out.</p>
+          <div class="exec-items">
+            <div class="exec-item">
+              <div class="exec-item-title">Emergency Schedule Recovery</div>
+              <p>Fast-turnaround recovery plans when scope or sequencing has shifted significantly during the event.</p>
+            </div>
+            <div class="exec-item">
+              <div class="exec-item-title">Critical Path Triage</div>
+              <p>Rapid identification of where the schedule has drifted and what the fastest viable path forward looks like.</p>
+            </div>
+            <div class="exec-item">
+              <div class="exec-item-title">Daily Updates &amp; Re-sequencing</div>
+              <p>Ongoing schedule update support during execution to keep the team working from an accurate, credible picture.</p>
+            </div>
+            <div class="exec-item">
+              <div class="exec-item-title">Remote Stand-by</div>
+              <p>Pre-arranged availability during an event so experienced scheduling support is a call or message away.</p>
+            </div>
+          </div>
+          <div class="btn-row" style="margin-top:0">
+            <a class="btn btn-primary" href="mailto:jason.kelley@keltechcontrols.com?subject=Execution%20Support%20Inquiry">Ask About Execution Support</a>
+            <a class="btn btn-secondary" href="#retainer">See Retainer Options</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RETAINER -->
+    <section id="retainer" class="section-tight">
+      <div class="container">
+        <div class="eyebrow">Retainer &amp; Ongoing Advisory</div>
+        <h2>Consistent scheduling access, structured around how you work.</h2>
+        <p class="lead" style="max-width:790px">Not every facility needs a full-time scheduler year-round. Retainer arrangements provide reliable access to experienced turnaround and project controls support without the overhead of a permanent hire.</p>
+
+        <div class="four-col" style="margin-top:28px">
+          <div class="package-card-gold">
+            <h3>Monthly Hours Block</h3>
+            <p style="font-size:.9rem;margin-bottom:8px">Predictable access every month.</p>
+            <ul>
+              <li>Reserved hours per month</li>
+              <li>Schedule reviews &amp; updates</li>
+              <li>Controls and reporting support</li>
+              <li>Rolls over by agreement</li>
+            </ul>
+          </div>
+          <div class="package-card-gold">
+            <h3>On-Call Advisory</h3>
+            <p style="font-size:.9rem;margin-bottom:8px">Available when you need it.</p>
+            <ul>
+              <li>Quick-turn schedule questions</li>
+              <li>Critical path &amp; logic review</li>
+              <li>Planning and estimate input</li>
+              <li>Flexible as needs arise</li>
+            </ul>
+          </div>
+          <div class="package-card-gold">
+            <h3>Schedule Health Checks</h3>
+            <p style="font-size:.9rem;margin-bottom:8px">Ongoing quality assurance.</p>
+            <ul>
+              <li>Regular P6 schedule audits</li>
+              <li>Logic and float integrity review</li>
+              <li>Documented findings &amp; actions</li>
+              <li>Pre-TA or ongoing cadence</li>
+            </ul>
+          </div>
+          <div class="package-card-gold">
+            <h3>Execution Stand-by</h3>
+            <p style="font-size:.9rem;margin-bottom:8px">Support locked in for the event.</p>
+            <ul>
+              <li>Pre-arranged availability</li>
+              <li>Remote response during the TA</li>
+              <li>Recovery &amp; re-sequencing ready</li>
+              <li>Daily update support available</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="highlight-box" style="margin-top:24px">
+          <div class="two-col">
+            <div>
+              <h3 style="margin-bottom:10px">Tailored to your facility's workload and timing.</h3>
+              <p style="margin-bottom:0">Retainer arrangements are built around how each facility operates — whether the need is a standing monthly block, on-call advisory heading into a TA season, or execution stand-by during the event itself.</p>
+            </div>
+            <div style="display:flex;align-items:center">
+              <a class="btn btn-gold" href="mailto:jason.kelley@keltechcontrols.com?subject=Retainer%20Inquiry">Discuss a Retainer Arrangement</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <svg viewBox="0 0 44 44" width="36" height="36" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="40" height="40" rx="11" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <line x1="11" y1="10" x2="11" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="26" y2="10" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="27" y2="34" stroke="#55A99A" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="32" y1="15" x2="32" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="22" y1="15" x2="42" y2="15" stroke="#F5B235" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <div class="footer-brand-text">
+          <strong>Keltech Controls</strong>
+          <span>Build it right &#x2192; Run it right</span>
+        </div>
+      </div>
+      <div class="small" style="text-align:center">&#169; 2026 Keltech Controls, LLC. All rights reserved.</div>
+      <div class="small" style="text-align:right">
+        <a href="index.html" style="color:var(--muted)">Home</a> &#x2022;
+        <a href="schedule-doctor.html" style="color:var(--muted)">Schedule Doctor</a> &#x2022;
+        <a href="training.html" style="color:var(--muted)">Training</a> &#x2022;
+        <a href="consulting.html" style="color:var(--muted)">Consulting</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
