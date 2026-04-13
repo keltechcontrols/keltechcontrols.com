@@ -6,6 +6,13 @@
   <title>Keltech Controls | Turnaround Scheduling and Project Controls</title>
   <meta name="description" content="Keltech Controls provides turnaround scheduling, Primavera P6 support, Schedule Doctor remote diagnostics, execution support, retainer advisory, group training, and one-on-one scheduler development for refineries and industrial facilities." />
   <link rel="stylesheet" href="css/shared.css" />
+  <style>
+    .counter-bar{display:flex;align-items:center;justify-content:center;gap:10px;padding:10px 0 0;border-top:1px solid rgba(255,255,255,.06);margin-top:24px;width:100%}
+    .counter-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2s ease-in-out infinite;flex-shrink:0}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+    .counter-label{font-size:.8rem;color:var(--muted)}
+    .counter-num{font-size:.8rem;color:var(--teal);font-weight:700}
+  </style>
 </head>
 <body>
 
@@ -256,7 +263,20 @@
         <a href="consulting.html" style="color:var(--muted)">Consulting</a>
       </div>
     </div>
+    <div class="container">
+      <div class="counter-bar">
+        <div class="counter-dot"></div>
+        <span class="counter-label">Total site visits:</span>
+        <span class="counter-num" id="visit-count">—</span>
+      </div>
+    </div>
   </footer>
+  <script>
+    fetch('https://api.countapi.xyz/hit/keltechcontrols.com/pageviews')
+      .then(r => r.json())
+      .then(d => { if (d && d.value) document.getElementById('visit-count').textContent = d.value.toLocaleString(); })
+      .catch(() => {});
+  </script>
 
 </body>
 </html>
