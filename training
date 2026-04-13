@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Group Training &amp; Workshops | Keltech Controls</title>
+  <meta name="description" content="Keltech Controls offers virtual group training and workshops for turnaround planning teams — P6 fundamentals, turnaround scheduling concepts, and schedule review and readiness." />
+  <link rel="stylesheet" href="css/shared.css" />
+</head>
+<body>
+
+  <div class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 76 76" fill="none" aria-hidden="true">
+          <rect x="4" y="4" width="68" height="68" rx="18" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+          <line x1="20" y1="18" x2="20" y2="58" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="20" y1="38" x2="46" y2="18" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="20" y1="38" x2="47" y2="58" stroke="#55A99A" stroke-width="6" stroke-linecap="round"/>
+          <line x1="54" y1="27" x2="54" y2="58" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="38" y1="27" x2="70" y2="27" stroke="#F5B235" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text">
+          <strong>Keltech Controls</strong>
+          <span>Build it right &#x2192; Run it right</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="schedule-doctor.html">Schedule Doctor</a>
+        <a href="execution-support.html">Execution Support</a>
+        <a href="training.html" class="active">Training</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="services.html">Services</a>
+        <a href="mailto:jason.kelley@keltechcontrols.com?subject=Keltech Controls Inquiry">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">Group Training &amp; Workshops</div>
+        <h1 style="font-size:clamp(1.8rem,4vw,3.2rem);max-width:760px">Team-level development built around real turnaround scheduling.</h1>
+        <p class="lead" style="max-width:720px">Workshops are delivered virtually and tailored to the group's current capability — whether that's a planning team building P6 foundations or a coordinator group that wants stronger turnaround scheduling judgment.</p>
+        <p style="max-width:720px">All sessions are experience-based and owner-side focused. The goal is practical improvement in how your team reads, contributes to, and challenges a P6 schedule — not generic software training.</p>
+      </div>
+    </section>
+
+    <!-- WORKSHOP FORMATS -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="eyebrow">Workshop Formats</div>
+        <h2>Four areas of focus, built around your team's needs.</h2>
+
+        <table class="training-table" style="margin-top:28px">
+          <tr>
+            <td>P6 Fundamentals for Teams</td>
+            <td>Activity setup, logic development, float interpretation, and common mistakes. Useful for planning teams who work around P6 but want to build real confidence reading and contributing to schedules.</td>
+          </tr>
+          <tr>
+            <td>Turnaround Scheduling Concepts</td>
+            <td>Shutdown and startup sequencing, inspection integration, craft loading, and how a well-built schedule supports execution decisions. Practical and owner-side focused — covers what courses miss.</td>
+          </tr>
+          <tr>
+            <td>Schedule Review &amp; Readiness</td>
+            <td>Teaches teams how to read and challenge a schedule — identifying logic gaps, float risk, and sequencing issues before they surface in the field. Well-suited for coordinator groups and planners moving toward scheduling roles.</td>
+          </tr>
+          <tr>
+            <td>
+              Student-Driven Course
+              <span class="coming-badge">Coming</span>
+            </td>
+            <td>
+              A self-paced or cohort-driven course for individual learners. Format and availability will be finalized based on interest.
+              <a href="mailto:jason.kelley@keltechcontrols.com?subject=Course%20Interest" style="color:var(--blue2);font-weight:600;margin-left:6px">Register interest &#x2192;</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- WHO IT HELPS -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="eyebrow">Who This Helps</div>
+        <h2>Built for teams trying to move from exposure to real capability.</h2>
+        <div class="three-col" style="margin-top:28px">
+          <div class="card">
+            <h3>Planners Moving Toward Scheduling</h3>
+            <p>For maintenance or TA planners who are around P6 and schedules, but want to understand how to actually build, interpret, and manage them.</p>
+          </div>
+          <div class="card">
+            <h3>Coordinators Expanding Their Role</h3>
+            <p>For professionals who already work around turnaround planning and execution and want stronger technical and practical scheduling skills.</p>
+          </div>
+          <div class="card">
+            <h3>Planning Teams Before a TA</h3>
+            <p>For groups that want to sharpen schedule review skills and readiness assessment capability before heading into a major turnaround event.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="highlight-box">
+          <div class="two-col">
+            <div>
+              <h3 style="margin-bottom:10px">All group sessions are delivered remotely.</h3>
+              <p style="margin-bottom:0">Scope, depth, and session count are built around the group's needs and current capability level. Reach out to discuss what format makes sense for your team.</p>
+            </div>
+            <div style="display:flex;align-items:center">
+              <a class="btn btn-primary" href="mailto:jason.kelley@keltechcontrols.com?subject=Group%20Training%20Inquiry">Inquire About Group Training</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <svg viewBox="0 0 44 44" width="36" height="36" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="40" height="40" rx="11" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <line x1="11" y1="10" x2="11" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="26" y2="10" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="27" y2="34" stroke="#55A99A" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="32" y1="15" x2="32" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="22" y1="15" x2="42" y2="15" stroke="#F5B235" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <div class="footer-brand-text">
+          <strong>Keltech Controls</strong>
+          <span>Build it right &#x2192; Run it right</span>
+        </div>
+      </div>
+      <div class="small" style="text-align:center">&#169; 2026 Keltech Controls, LLC. All rights reserved.</div>
+      <div class="small" style="text-align:right">
+        <a href="index.html" style="color:var(--muted)">Home</a> &#x2022;
+        <a href="schedule-doctor.html" style="color:var(--muted)">Schedule Doctor</a> &#x2022;
+        <a href="execution-support.html" style="color:var(--muted)">Execution Support</a> &#x2022;
+        <a href="consulting.html" style="color:var(--muted)">Consulting</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
