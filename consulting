@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One-On-One Consulting | Keltech Controls</title>
+  <meta name="description" content="Keltech Controls offers practical one-on-one scheduler development for planners, coordinators, and developing schedulers — Primavera P6, turnaround concepts, and real-world application." />
+  <link rel="stylesheet" href="css/shared.css" />
+</head>
+<body>
+
+  <div class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 76 76" fill="none" aria-hidden="true">
+          <rect x="4" y="4" width="68" height="68" rx="18" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+          <line x1="20" y1="18" x2="20" y2="58" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="20" y1="38" x2="46" y2="18" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="20" y1="38" x2="47" y2="58" stroke="#55A99A" stroke-width="6" stroke-linecap="round"/>
+          <line x1="54" y1="27" x2="54" y2="58" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+          <line x1="38" y1="27" x2="70" y2="27" stroke="#F5B235" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text">
+          <strong>Keltech Controls</strong>
+          <span>Build it right &#x2192; Run it right</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="schedule-doctor.html">Schedule Doctor</a>
+        <a href="execution-support.html">Execution Support</a>
+        <a href="training.html">Training</a>
+        <a href="consulting.html" class="active">Consulting</a>
+        <a href="services.html">Services</a>
+        <a href="mailto:jason.kelley@keltechcontrols.com?subject=Keltech Controls Inquiry">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">One-On-One Consulting</div>
+        <h1 style="font-size:clamp(1.8rem,4vw,3.2rem);max-width:780px">Practical scheduler development built around real turnaround work.</h1>
+        <p class="lead" style="max-width:720px">For planners, coordinators, and developing schedulers who want more than generic software training. The focus is practical growth in Primavera P6, turnaround concepts, and how scheduling is actually applied in the field.</p>
+
+        <div class="three-col" style="margin-top:36px">
+          <div class="card">
+            <h3>Structured Development</h3>
+            <ul>
+              <li>P6 fundamentals</li>
+              <li>Logic development and common mistakes</li>
+              <li>Critical path and float interpretation</li>
+              <li>Turnaround schedule structure</li>
+              <li>Inspection integration and sequencing</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Real World Learning</h3>
+            <ul>
+              <li>Less formal, experience-based sessions</li>
+              <li>Day in the life of a scheduler walkthroughs</li>
+              <li>How planning and execution really connect</li>
+              <li>Practical problem-solving discussions</li>
+              <li>Strong owner-side perspective with practical understanding of contractor interface</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Typical Session Focus</h3>
+            <ul>
+              <li>P6 technical confidence</li>
+              <li>Turnaround concepts that courses miss</li>
+              <li>How a real scheduler thinks day to day</li>
+              <li>Career positioning and role alignment</li>
+              <li>Practical growth, not filler training</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO IT HELPS -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="eyebrow">Who This Helps</div>
+        <h2>Built for people trying to move from exposure to real capability.</h2>
+        <div class="three-col" style="margin-top:28px">
+          <div class="card">
+            <h3>Planners Moving Toward Scheduling</h3>
+            <p>For maintenance or TA planners who are around P6 and schedules, but want to understand how to actually build, interpret, and manage them.</p>
+          </div>
+          <div class="card">
+            <h3>Coordinators Expanding Their Role</h3>
+            <p>For professionals who already work around turnaround planning and execution and want stronger technical and practical scheduling skills.</p>
+          </div>
+          <div class="card">
+            <h3>Developing Schedulers</h3>
+            <p>For people who know the software basics but want owner-side insight, better judgment, and real world application that improves credibility fast.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGAGEMENT PATH -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="eyebrow">Engagement Path</div>
+        <h2>A simple path from assessment to real progress.</h2>
+        <div class="four-col" style="margin-top:26px">
+          <div class="step"><div class="step-number">1</div><h3>Initial Assessment</h3><p>A short intake identifies current P6 knowledge, turnaround exposure, target role, and the best place to begin.</p></div>
+          <div class="step"><div class="step-number">2</div><h3>Focused Development</h3><p>A targeted package builds fundamentals, turnaround concepts, and practical understanding without wasting time.</p></div>
+          <div class="step"><div class="step-number">3</div><h3>Real World Application</h3><p>Sessions shift into day-in-the-life discussions, real schedule examples, and problem-solving scenarios.</p></div>
+          <div class="step"><div class="step-number">4</div><h3>Follow On Growth</h3><p>Additional coaching moves into schedule quality reviews, deeper analysis, and more advanced support.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTAKE -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="eyebrow">Initial Assessment</div>
+        <h2>Start with a focused intake so time is spent where it matters.</h2>
+        <p class="lead" style="max-width:720px">For one-on-one development engagements, the process typically begins with a short assessment. This allows sessions to be tailored to the individual's experience level, goals, and target role.</p>
+
+        <div class="three-col" style="margin-top:28px">
+          <div class="card">
+            <h3>Background</h3>
+            <ul class="checklist">
+              <li>Current role and years of experience</li>
+              <li>Exposure to maintenance, projects, or turnarounds</li>
+              <li>Past roles such as planner, coordinator, or scheduler</li>
+              <li>Target path and career direction</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>P6 And Fundamentals</h3>
+            <ul class="checklist">
+              <li>Current Primavera P6 experience</li>
+              <li>Comfort with logic, critical path, and float</li>
+              <li>What has been built, updated, or reviewed in P6</li>
+              <li>Current strengths and known gaps</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Turnaround Focus</h3>
+            <ul class="checklist">
+              <li>Owner-side or contractor-side interest</li>
+              <li>Exposure to shutdown and startup sequencing</li>
+              <li>Inspection integration understanding</li>
+              <li>Specific areas the individual wants to improve</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="highlight-box" style="margin-top:24px">
+          <div class="two-col">
+            <div>
+              <h3 style="margin-bottom:12px">Start with a focused initial assessment</h3>
+              <p style="margin-bottom:0">The assessment identifies current P6 knowledge, turnaround exposure, target role, and the most useful development path — so the first session is productive and paid time stays focused on real progress.</p>
+            </div>
+            <div style="display:flex;flex-direction:column;justify-content:center;gap:14px">
+              <a class="btn btn-primary" href="https://forms.gle/xGJ5X5MMnMQoocQR9" target="_blank" rel="noopener">Begin Assessment Intake</a>
+              <a class="btn btn-secondary" href="mailto:jason.kelley@keltechcontrols.com?subject=Consulting%20Questions">Ask A Question First</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <svg viewBox="0 0 44 44" width="36" height="36" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="40" height="40" rx="11" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <line x1="11" y1="10" x2="11" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="26" y2="10" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="22" x2="27" y2="34" stroke="#55A99A" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="32" y1="15" x2="32" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="22" y1="15" x2="42" y2="15" stroke="#F5B235" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <div class="footer-brand-text">
+          <strong>Keltech Controls</strong>
+          <span>Build it right &#x2192; Run it right</span>
+        </div>
+      </div>
+      <div class="small" style="text-align:center">&#169; 2026 Keltech Controls, LLC. All rights reserved.</div>
+      <div class="small" style="text-align:right">
+        <a href="index.html" style="color:var(--muted)">Home</a> &#x2022;
+        <a href="schedule-doctor.html" style="color:var(--muted)">Schedule Doctor</a> &#x2022;
+        <a href="training.html" style="color:var(--muted)">Training</a> &#x2022;
+        <a href="services.html" style="color:var(--muted)">Services</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
