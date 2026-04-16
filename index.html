@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="css/shared.css" />
   <style>
     .counter-bar{display:flex;align-items:center;justify-content:center;gap:10px;padding:10px 0 0;border-top:1px solid rgba(255,255,255,.06);margin-top:24px;width:100%}
+    .counter-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0}
     .counter-label{font-size:.8rem;color:var(--muted)}
-    .counter-bar img{height:20px;border-radius:4px;vertical-align:middle}
+    .counter-num{font-size:.8rem;color:var(--teal);font-weight:700}
   </style>
 </head>
 <body>
@@ -263,11 +264,35 @@
     </div>
     <div class="container">
       <div class="counter-bar">
+        <div class="counter-dot"></div>
         <span class="counter-label">Site visits:</span>
-        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fkeltechcontrols.com&count_bg=%2355A99A&title_bg=%230d1b2e&icon=&icon_color=%23ffffff&title=visits&edge_flat=false" alt="visitor count" />
+        <span class="counter-num" id="visit-count">—</span>
       </div>
     </div>
   </footer>
+
+  <script>
+    // JSONbin.io free visitor counter — works on GitHub Pages with no CORS issues
+    // BIN_ID and API_KEY are set below — see setup instructions
+    var BIN_ID = '69e0edea36566621a8bdb1b9';
+    var API_KEY = '69e0edcd10716a4d5de5c0d6';
+    var url = 'https://api.jsonbin.io/v3/b/' + BIN_ID;
+
+    fetch(url, { headers: { 'X-Master-Key': API_KEY } })
+      .then(r => r.json())
+      .then(data => {
+        var count = (data.record.count || 0) + 1;
+        document.getElementById('visit-count').textContent = count.toLocaleString();
+        return fetch(url, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json', 'X-Master-Key': API_KEY },
+          body: JSON.stringify({ count: count })
+        });
+      })
+      .catch(() => {
+        document.getElementById('visit-count').textContent = '—';
+      });
+  </script>
 
 </body>
 </html>
