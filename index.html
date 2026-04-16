@@ -272,9 +272,9 @@
     </div>
   </footer>
   <script>
-    fetch('https://api.countapi.xyz/hit/keltechcontrols.com/pageviews')
+    fetch('https://hits.sh/keltechcontrols.com.json')
       .then(r => r.json())
-      .then(d => { if (d && d.value) document.getElementById('visit-count').textContent = d.value.toLocaleString(); })
+      .then(d => { if (d && d.count) document.getElementById('visit-count').textContent = Number(d.count).toLocaleString(); })
       .catch(() => {});
   </script>
 
