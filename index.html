@@ -84,8 +84,8 @@
       <nav class="nav-links">
         <a href="schedule-doctor.html">Schedule Doctor</a>
         <a href="execution-support.html">Execution Support</a>
-        <a href="training.html">Training</a>
-        <a href="consulting.html">Consulting</a>
+        <a href="training.html">Training &amp; Development</a>
+        
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -123,7 +123,7 @@
           <p>From schedule development and recovery planning to remote diagnostics, live execution stand-by, and practical coaching — identify risk early, improve schedule credibility, and help teams execute with confidence.</p>
           <div class="btn-row">
             <a class="btn btn-primary" href="contact.html">Request a Schedule Review</a>
-            <a class="btn btn-secondary" href="consulting.html">Explore One-On-One Consulting</a>
+            <a class="btn btn-secondary" href="training.html#one-on-one">Explore 1-on-1 Training</a>
           </div>
         </div>
         <div class="glass" style="padding:24px;position:relative;overflow:hidden">
@@ -186,13 +186,13 @@
               <div style="width:40px;height:40px;border-radius:12px;background:rgba(85,169,154,.12);border:1px solid rgba(85,169,154,.25);display:grid;place-items:center;margin-bottom:14px">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="7" cy="7" r="3" stroke="#55A99A" stroke-width="1.5"/><circle cx="14" cy="7" r="2" stroke="#55A99A" stroke-width="1.3"/><path d="M2 16c0-3 2-5 5-5s5 2 5 5" stroke="#55A99A" stroke-width="1.5" stroke-linecap="round"/><path d="M14 10c2 0 4 1.5 4 4" stroke="#55A99A" stroke-width="1.3" stroke-linecap="round"/></svg>
               </div>
-              <h3 style="color:#fff;margin-bottom:8px">Training <span class="new-badge">New</span></h3>
+              <h3 style="color:#fff;margin-bottom:8px">Training &amp; Development</h3>
               <p style="font-size:.92rem;margin:0">One-on-one scheduler development and group workshops. P6 fundamentals, turnaround concepts, real-world application.</p>
               <div style="margin-top:14px;font-size:.85rem;color:var(--teal);font-weight:600">Learn more &#x2192;</div>
             </div>
           </a>
 
-          <a href="consulting.html" style="display:block">
+          <a href="training.html#one-on-one" style="display:block">
             <div class="card" style="border-color:rgba(94,182,255,.22);transition:.2s ease" onmouseover="this.style.borderColor='rgba(94,182,255,.5)'" onmouseout="this.style.borderColor='rgba(94,182,255,.22)'">
               <div style="width:40px;height:40px;border-radius:12px;background:rgba(94,182,255,.12);border:1px solid rgba(94,182,255,.25);display:grid;place-items:center;margin-bottom:14px">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="7" r="3.5" stroke="#7DD3FC" stroke-width="1.5"/><path d="M4 17c0-3.5 2.7-6 6-6s6 2.5 6 6" stroke="#7DD3FC" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -288,13 +288,13 @@
           <a href="schedule-doctor.html" style="color:var(--muted)">Schedule Doctor</a> &#x2022;
           <a href="execution-support.html" style="color:var(--muted)">Execution Support</a> &#x2022;
           <a href="training.html" style="color:var(--muted)">Training</a> &#x2022;
-          <a href="consulting.html" style="color:var(--muted)">Consulting</a>
+          <a href="training.html" style="color:var(--muted)">Training &amp; Development</a>
         </div>
       </div>
       <div class="counter-bar">
         <div class="counter-dot"></div>
         <span class="counter-label">Site visits:</span>
-        <span class="counter-num" id="visit-count">—</span>
+        <span class="counter-num" id="visit-count">&#x2014;</span>
       </div>
       <div style="text-align:center;margin-top:16px">
         <span class="small">&#169; 2026 Keltech Controls, LLC. All rights reserved.</span>
@@ -303,7 +303,6 @@
   </footer>
 
   <script>
-    // Using JSONbin public bin — no API key needed, no CORS issues
     var BIN = '69e0edea36566621a8bdb1b9';
     var url = 'https://api.jsonbin.io/v3/b/' + BIN;
     fetch(url + '/latest', { headers: { 'X-Access-Key': '$2a$10$opbsKgHo7iAQs1BfKMqj1.ppZ4kPK6qx3cvJgRNC/LAzoJjJ7Pyci' } })
@@ -320,7 +319,7 @@
           body: JSON.stringify({ count: count })
         });
       })
-      .catch(function(){ document.getElementById('visit-count').textContent = '—'; });
+      .catch(function(){ document.getElementById('visit-count').textContent = '&#x2014;'; });
   </script>
 
 </body>
